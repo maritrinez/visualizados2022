@@ -1,14 +1,3 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-.arrow {
-    transition: transform 0.5s ease-out;
-}
-.touch:hover > .arrow {
-    transform: translate(0.5rem,0);
-    -webkit-transform: translate(0.5rem,0);
-    -moz-transform: translate(0.5rem,0);
-    -o-transform: translate(0.5rem,0);
-    -ms-transform: translate(0.5rem,0);
-}
