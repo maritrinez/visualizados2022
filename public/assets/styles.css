@@ -547,8 +547,16 @@ video {
   }
 }
 
+.invisible {
+  visibility: hidden;
+}
+
 .static {
   position: static;
+}
+
+.fixed {
+  position: fixed;
 }
 
 .absolute {
@@ -557,6 +565,10 @@ video {
 
 .relative {
   position: relative;
+}
+
+.sticky {
+  position: sticky;
 }
 
 .-top-full {
@@ -571,6 +583,22 @@ video {
   margin: auto;
 }
 
+.m-0 {
+  margin: 0px;
+}
+
+.-m-32 {
+  margin: -8rem;
+}
+
+.-m-20 {
+  margin: -5rem;
+}
+
+.-m-\[200px\] {
+  margin: -200px;
+}
+
 .my-6 {
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
@@ -580,12 +608,60 @@ video {
   margin-left: 0.25rem;
 }
 
+.mt-14 {
+  margin-top: 3.5rem;
+}
+
+.-mt-14 {
+  margin-top: -3.5rem;
+}
+
+.mt-0 {
+  margin-top: 0px;
+}
+
+.-ml-16 {
+  margin-left: -4rem;
+}
+
+.-mt-16 {
+  margin-top: -4rem;
+}
+
+.-mt-\[72px\] {
+  margin-top: -72px;
+}
+
+.-mt-\[200px\] {
+  margin-top: -200px;
+}
+
+.mt-64 {
+  margin-top: 16rem;
+}
+
+.-mt-64 {
+  margin-top: -16rem;
+}
+
+.mt-12 {
+  margin-top: 3rem;
+}
+
+.mt-52 {
+  margin-top: 13rem;
+}
+
 .flex {
   display: flex;
 }
 
 .table {
   display: table;
+}
+
+.hidden {
+  display: none;
 }
 
 .aspect-video {
@@ -606,6 +682,10 @@ video {
 
 .h-full {
   height: 100%;
+}
+
+.h-0 {
+  height: 0px;
 }
 
 .w-6 {
@@ -634,6 +714,10 @@ video {
 
 .basis-1\/5 {
   flex-basis: 20%;
+}
+
+.grid-rows-1 {
+  grid-template-rows: repeat(1, minmax(0, 1fr));
 }
 
 .flex-row {
@@ -697,6 +781,11 @@ video {
 .bg-yellow-100 {
   --tw-bg-opacity: 1;
   background-color: rgb(254 249 195 / var(--tw-bg-opacity));
+}
+
+.bg-pink-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(236 72 153 / var(--tw-bg-opacity));
 }
 
 .px-4 {
@@ -770,6 +859,24 @@ video {
 
 .transition-\[top\] {
   transition-property: top;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.transition-\[display\] {
+  transition-property: display;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.transition-\[margin\] {
+  transition-property: margin;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.transition-\[height\] {
+  transition-property: height;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
