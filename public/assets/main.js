@@ -8,10 +8,18 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
   function hideNav() {
     document.getElementById("menu").style.marginTop = getMT();
+    document.getElementById("bars-3").classList.remove("hidden"); 
+    document.getElementById("bars-3").classList.add("block");
+    document.getElementById("x-mark").classList.remove("block"); 
+    document.getElementById("x-mark").classList.add("hidden"); 
   }
 
   function showNav() {
     document.getElementById("menu").style.marginTop = '0px';
+    document.getElementById("bars-3").classList.remove("block"); 
+    document.getElementById("bars-3").classList.add("hidden");
+    document.getElementById("x-mark").classList.remove("hidden"); 
+    document.getElementById("x-mark").classList.add("block");  
   }
 
   function toggleNav() {
@@ -33,7 +41,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
   
   // Apply interaction
   loadNav();
-  document.getElementById("link-menu").addEventListener("click", toggleNav, false);
+  document.getElementById("menu-button").addEventListener("click", toggleNav, false);
   
   // - - - WHO AM I
   function toggleWhoami(e) {
