@@ -14,9 +14,11 @@ module.exports = {
           '0%, 100%': { transform: 'perspective(1px) translateZ(0)' },
           '50%': { transform: 'scale(1.2)' },
         }
+      },
+      screens: {
+        '3xl': '2100px',
       }
-
-    },
+    }
   },
   plugins: [],
 }
