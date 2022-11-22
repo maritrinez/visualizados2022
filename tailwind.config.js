@@ -17,8 +17,18 @@ module.exports = {
       },
       screens: {
         '3xl': '2100px',
+      },
+      aspectRatio: {
+        'widescreen': '21 / 9',
       }
     }
   },
-  plugins: [],
+  plugins: [
+    require('tailwindcss-fluid-type')({
+      settings: {
+          // ...
+          prefix: 'fl-',
+      },
+    }),
+  ],
 }

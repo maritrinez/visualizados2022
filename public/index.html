@@ -14,13 +14,74 @@
 <body>
   <div id="wrap" class="relative">
     
-    <nav id="menu" class="bg-yellow-100 w-full -top-full absolute">
-      <ul class="flex flex-col items-center py-4 space-y-4">
-        <li>Work</li>
-        <li id="nav-whoami" class="hover:cursor-pointer">Who am I</li>
-        
+    <div id="hd-wrapper" class="test sticky z-10">
+      <nav id="menu" class="bg-yellow-100 w-full hidden">
+        <ul class="flex flex-col items-center py-4 space-y-4">
+          <li>Work</li>
+          <li id="nav-whoami" class="hover:cursor-pointer">Who am I</li>
+          
+            <!-- Get in touch -->
+            <li class="flex basis-2/5 justify-end space-x-3 sm:hidden items-center">
+              <div class="peer group flex items-center space-x-1 pr-2">
+                <h2 class="peer">Get in touch</h2>
+                
+                <!-- Heroicon name: arrow-small-right -->
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" class="w-5 h-5 group-hover:translate-x-2 transition-transform">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
+                </svg>                           
+              </div>
+
+              <!-- Twitter -->
+              <a class="hover:animate-glow hover:text-yellow-400 peer-hover:animate-[glow_0.3s_1_0.1s] " href="https://twitter.com/maritrinez" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-4 h-4"><!--! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path fill="currentColor" d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+              </a>
+              <!-- Linkedin -->
+              <a class="hover:animate-glow hover:text-yellow-400 peer-hover:animate-[glow_0.3s_1_0.20s]" href="https://www.linkedin.com/in/mtnez/" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="w-4 h-4"><!--! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path fill="currentColor" d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"/></svg>
+              </a>
+              <!-- mail -->
+              <a class="hover:animate-glow hover:text-yellow-400 peer-hover:animate-[glow_0.3s_1_0.25s]" href="https://www.linkedin.com/in/mtnez/" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+                </svg>                
+              </a>
+            </li>
+          
+        </ul>
+      </nav>
+      
+      <header class="bg-gray-100">
+        <div class="flex h-14 items-center justify-between mx-auto px-3 sm:px-5 md:px-10">
+          <!-- Logo-->
+          <div id="logo" class="basis-2/5">
+            <a href="./">visualizados</a>
+          </div>
+          
+          <!-- Menu button-->
+          <div id="menu-button" class="basis-1/5 justify-end sm:justify-center flex items-center">
+            <!-- Mobile menu button-->
+            <button type="button" class="inline-flex items-center justify-center rounded-md p-2 text-gray-800 hover:animate-glow hover:text-yellow-400 focus:outline-none " aria-controls="mobile-menu" aria-expanded="false">
+              <!--icon outline/bars-3
+                  Menu open: "hidden", Menu closed: "block"
+              -->
+              <svg id="bars-3" class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+              </svg>
+              <!--
+                Icon when menu is open.
+    
+                Heroicon name: outline/x-mark
+    
+                Menu open: "block", Menu closed: "hidden"
+              -->
+              <svg id="x-mark" class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+
           <!-- Get in touch -->
-          <li class="flex basis-2/5 justify-end space-x-3 sm:hidden items-center">
+          <div class="hidden basis-2/5 justify-end space-x-3 sm:flex items-center">
             <div class="peer group flex items-center space-x-1 pr-2">
               <h2 class="peer">Get in touch</h2>
               
@@ -44,72 +105,13 @@
                 <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
               </svg>                
             </a>
-          </li>
-        
-      </ul>
-    </nav>
-    
-    <header class="bg-gray-100">
-      <div class="flex h-14 items-center justify-between mx-auto px-3 sm:px-5 md:px-10">
-        <!-- Logo-->
-        <div id="logo" class="basis-2/5">
-          <a href="./">visualizados</a>
-        </div>
-        
-        <!-- Menu button-->
-        <div id="menu-button" class="basis-1/5 justify-end sm:justify-center flex items-center">
-          <!-- Mobile menu button-->
-          <button type="button" class="inline-flex items-center justify-center rounded-md p-2 text-gray-800 hover:animate-glow hover:text-yellow-400 focus:outline-none " aria-controls="mobile-menu" aria-expanded="false">
-            <!--icon outline/bars-3
-                Menu open: "hidden", Menu closed: "block"
-            -->
-            <svg id="bars-3" class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-            </svg>
-            <!--
-              Icon when menu is open.
-  
-              Heroicon name: outline/x-mark
-  
-              Menu open: "block", Menu closed: "hidden"
-            -->
-            <svg id="x-mark" class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-            </svg>
-          </button>
-        </div>
-
-        <!-- Get in touch -->
-        <div class="hidden basis-2/5 justify-end space-x-3 sm:flex items-center">
-          <div class="peer group flex items-center space-x-1 pr-2">
-            <h2 class="peer">Get in touch</h2>
-            
-            <!-- Heroicon name: arrow-small-right -->
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" class="w-5 h-5 group-hover:translate-x-2 transition-transform">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
-            </svg>                           
           </div>
-
-          <!-- Twitter -->
-          <a class="hover:animate-glow hover:text-yellow-400 peer-hover:animate-[glow_0.3s_1_0.1s] " href="https://twitter.com/maritrinez" target="_blank">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-4 h-4"><!--! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path fill="currentColor" d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
-          </a>
-          <!-- Linkedin -->
-          <a class="hover:animate-glow hover:text-yellow-400 peer-hover:animate-[glow_0.3s_1_0.20s]" href="https://www.linkedin.com/in/mtnez/" target="_blank">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="w-4 h-4"><!--! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path fill="currentColor" d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"/></svg>
-          </a>
-          <!-- mail -->
-          <a class="hover:animate-glow hover:text-yellow-400 peer-hover:animate-[glow_0.3s_1_0.25s]" href="https://www.linkedin.com/in/mtnez/" target="_blank">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
-            </svg>                
-          </a>
         </div>
-      </div>
-    </header>
+      </header>
+    </div>
 
     <section id="greeting" class="bg-yellow-400 px-4">
-      <div id="hm-greeting" class= "aspect-video flex flex-column items-end">
+      <div id="hm-greeting" class= "aspect-widescreen flex flex-column items-end">
         <div class="hello pb-10">
           <h1 class="text-5xl">Hello,<br>welcome to visualizados</h1>
           <p class="">I am an independant full-stack data vizualizer.<br>
@@ -184,22 +186,32 @@
       </div>
     </section>
 
-    <section id="whoami" class="bg-yellow-100 absolute -top-full w-full h-full transition-[top] duration-1000 px-4">
-      <div class="container px-8 max-w-5xl m-auto flex flex-col sticky top-0">
-        <a id="close-whoami" class="self-end my-6">close</a>
-        <div class="aboutme pt-16 pb-3 flex flex-row">
-          <img class="pic w-1/3 h-1/3 pr-6" src="./assets/images/avatar.png">
-          <div class="aboutme">
-            <h2>
-              Hi, my name is Beatriz.<br>
-              Nice to have you here.
-            </h2>
-            <p>I am a Data Visualization designer and developer, with a background in social and market research.</p>
+    <section id="whoami" class="bg-yellow-100 absolute top-[-150%] w-full h-fit z-20 transition-[top] duration-1000">
+      <div class="pb-9 m-auto flex flex-col max-w-lg md:max-w-4xl">
+        <div class="flex justify-end">
+          <button type="button" id="close-whoami" class="p-2 text-gray-800 hover:animate-glow hover:text-yellow-400 focus:outline-none">
+            <svg  class="h-10 w-10 pointer-events-none" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+
+        <div class="grid-container pt-16 grid gap-12 grid-cols-1 md:grid-flow-col md:grid-cols-3">
+          <div class="pic max-w-sm place-self-center md:place-self-start">
+            <img class="" src="./assets/images/avatar.png">
+          </div>
+          
+          <div class="text fl-text-base space-y-6 md:col-span-2">
+            <h1 class="fl-text-6xl">
+              Hi, I'm <span class="bg-yellow-300">Beatriz</span>.
+            </h1>
+            <p class="fl-text-lg">I am a Data Visualization designer and developer, with a background in social and market research.</p>
             <p>After graduating as a Sociologist and a Publicist, I worked as a social and market researcher for five years. Of course I liked and I still like being a researcher, but what attracted me the most was finding revealing insights and communicating them in a clear and engaging way.</p>
             <p>In 2012 I started teaching myself about the theory and practice of Data Visualization. At this point the code came into my life. I realized then that developing the visualizations was as fun as finding and communicating the research insights. I specially enjoyed working with D3.js, in which I specialized.</p>
             <p>One year later I started my career as a Data Visualizer.</p>
             <p>Currently, I work creating unique, made-to-order data visualizations, expressly designed for a specific dataset, so I mainly work with static data, no matter how big or small. I also create reusable data visualizations, for those datasets with identical structure but different content.</p>
             <p>I love mails, hearing about new projects and challenges so Feel free to contact me with any questions, any data project or even just to say hello</p>
+            <a class="fl-text-3xl" href="mailto:beatriz@visualizados.com">beatriz@visualizados.com</a>
           </div>    
         </div>
       </div>
