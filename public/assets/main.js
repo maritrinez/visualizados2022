@@ -1,10 +1,12 @@
 window.addEventListener('DOMContentLoaded', (event) => {
   
-  // NAV first load & interaction
-  loadNav();
-  document.getElementById("menu-button").addEventListener("click", toggleNav, false);
+  // First load
+  firstLoad("menu")
+  firstLoad("whoami")
   
-  // WHO AM I interaction
+  // Apply interaction
+  document.getElementById("menu-button").addEventListener("click", toggleNav, false);
+
   document.getElementById("home-whoami").addEventListener("click", toggleWhoami, false);
   document.getElementById("nav-whoami").addEventListener("click", toggleWhoami, false);
   document.getElementById("close-whoami").addEventListener("click", toggleWhoami, false);
@@ -26,66 +28,93 @@ window.addEventListener('DOMContentLoaded', (event) => {
 ///// F U N C T I O N S //////
 //////////////////////////////
 
-// - - - NAV MENU
-function getMT() {
-  const h = document.getElementById("menu").clientHeight;
-  return `-${h}px`;
+// - - - MANAGE CONTAINERS
+
+// Helpers
+function getHeight(id) {
+  return document.getElementById(id).clientHeight;
 }
 
-function hideNav() { 
-  document.getElementById("menu").style.marginTop = getMT();
-  document.getElementById("hd-wrapper").style.top = getMT();
+function setMarginTop(id) {
+  const h = getHeight(id)
+  document.getElementById(id).style.marginTop = `-${h}px`;
+}
 
+function resetMarginTop(id) {
+  document.getElementById(id).style.marginTop = "0px";
+}
+
+// First load
+function firstLoad(id) {
+  document.getElementById(id).classList.remove("hidden");
+  document.getElementById('base').style.maxHeight = "120000px";
+  setMarginTop(id);
+
+  setTimeout(() => {
+    document.getElementById(id).classList.add("transition-[margin]", "duration-500");
+  }, "500")
+}
+
+// Showers
+function showWhoami () {
+  resetMarginTop("whoami");
+
+  // hide base 
+  document.getElementById('base').style.maxHeight = "0px";
+}
+
+function showNav () {
+  resetMarginTop("menu");
+
+  // toggle menu button
+  document.getElementById("bars-3").classList.remove("block"); 
+  document.getElementById("bars-3").classList.add("hidden");
+  document.getElementById("x-mark").classList.remove("hidden"); 
+  document.getElementById("x-mark").classList.add("block");
+  
+}
+
+
+// Hidders
+function hideWhoami () {
+  setMarginTop("whoami");
+
+  // reset base height
+  document.getElementById('base').style.maxHeight = "120000px";
+
+  // close nav
+  setTimeout(() => { hideNav()}, "100")
+}
+
+function hideNav () {
+  setMarginTop("menu");
+
+  // toggle menu button
   document.getElementById("bars-3").classList.remove("hidden"); 
   document.getElementById("bars-3").classList.add("block");
   document.getElementById("x-mark").classList.remove("block"); 
   document.getElementById("x-mark").classList.add("hidden"); 
 }
 
-function showNav() {
-  document.getElementById("menu").style.marginTop = '0px';
-  document.getElementById("hd-wrapper").style.top = '0px';
-
-  document.getElementById("bars-3").classList.remove("block"); 
-  document.getElementById("bars-3").classList.add("hidden");
-  document.getElementById("x-mark").classList.remove("hidden"); 
-  document.getElementById("x-mark").classList.add("block");  
-}
-
-function toggleNav() {
+// Togglers
+function toggleNav () {
   const el = document.getElementById("menu"),
         currentMargin = parseInt(el.style.marginTop);
-
   currentMargin < 0 ? showNav() : hideNav();
 }
 
-
-function loadNav() {
-  document.getElementById("menu").classList.remove("hidden");
-  hideNav();
-
-  setTimeout(() => {
-    document.getElementById("menu").classList.add("transition-[margin]", "duration-500");
-    document.getElementById("hd-wrapper").classList.add("transition-[top]", "duration-500");
-  }, "500")
+function toggleWhoami () {
+  const el = document.getElementById("whoami"),
+        currentMargin = parseInt(el.style.marginTop);
+  currentMargin < 0 ? showWhoami() : hideWhoami();
 }
 
 
-// - - - WHO AM I
-function toggleWhoami(e) {
-    
-  const wai = document.getElementById("whoami");
-  wai.classList.toggle("top-0");
-  wai.classList.toggle("top-[-150%]");
-  
-  window.scrollTo(0, 0);
-  
-  setTimeout(() => {
-    // Show the nav when Who Am I is opened, so it aligns correctly to top of the screen.
-    e.target.id == "close-whoami" ? hideNav() : showNav();
-  }, "100")
-  
-}
+
+
+
+
+
 
 // - - - COPY MAIL
 // https://codepen.io/eclarrrk/pen/ZZywZv
