@@ -58,7 +58,8 @@ function firstLoad(id) {
 // Showers
 function showWhoami () {
   resetMarginTop("whoami");
-
+  // scroll to top
+  window.scrollTo(0, 0);
   // hide base 
   document.getElementById('base').style.maxHeight = "0px";
 }

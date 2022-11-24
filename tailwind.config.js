@@ -1,4 +1,5 @@
-/** @type {import('tailwindcss').Config} */
+const defaultTheme = require("tailwindcss/defaultTheme");
+
 module.exports = {
   content: [
     "./public/index.html",
@@ -6,6 +7,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ["nunito", ...defaultTheme.fontFamily.sans],
+      },
       animation: {
         'glow': 'glow 0.3s linear 1'
       },
@@ -23,12 +27,5 @@ module.exports = {
       }
     }
   },
-  plugins: [
-    require('tailwindcss-fluid-type')({
-      settings: {
-          // ...
-          prefix: 'fl-',
-      },
-    }),
-  ],
+  plugins: [],
 }
