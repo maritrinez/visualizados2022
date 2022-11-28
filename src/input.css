@@ -1,8 +1,9 @@
 @tailwind base;
+/* https://theodorusclarence.com/blog/tailwindcss-best-practice */
 @layer base {
     h1,
     .h1 {
-      @apply font-sans text-2xl font-bold md:text-4xl;
+      @apply font-sans tracking-tight font-black mb-3 text-3xl md:text-4xl lg:text-5xl;
     }
     
     h2,
@@ -21,16 +22,17 @@
     }
     
     body,
+    p,
     .p {
-      @apply font-sans text-sm md:text-base;
+      @apply font-sans mt-1 text-sm xs:text-base lg:text-lg;
     }
 }
 @tailwind components;
 @tailwind utilities;
 
 .layout {
-    max-width: 68.75rem;
-    width: 90%;
+    /* max-width: 68.75rem; */
+    width: 92%;
     margin-left: auto;
     margin-right: auto;
 }

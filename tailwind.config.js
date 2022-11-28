@@ -6,9 +6,13 @@ module.exports = {
     "./public/assets/*.{html,js}"
   ],
   theme: {
+    screens: {
+      'xs': '320px',
+      ...defaultTheme.screens,
+    },
     extend: {
       fontFamily: {
-        sans: ["nunito", ...defaultTheme.fontFamily.sans],
+        sans: ["ruda", ...defaultTheme.fontFamily.sans],
       },
       animation: {
         'glow': 'glow 0.3s linear 1'
@@ -23,6 +27,7 @@ module.exports = {
         '3xl': '2100px',
       },
       aspectRatio: {
+        'traditional': '4 / 3',
         'widescreen': '21 / 9',
       }
     }
