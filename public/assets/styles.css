@@ -846,14 +846,9 @@ body,
   border-top-color: rgb(203 213 225 / var(--tw-border-opacity));
 }
 
-.bg-lime-400 {
+.bg-lime {
   --tw-bg-opacity: 1;
-  background-color: rgb(163 230 53 / var(--tw-bg-opacity));
-}
-
-.bg-yellow-300 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(253 224 71 / var(--tw-bg-opacity));
+  background-color: rgb(232 224 0 / var(--tw-bg-opacity));
 }
 
 .bg-orange-400 {
@@ -866,14 +861,17 @@ body,
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-.bg-yellow-400 {
+.bg-indigo {
   --tw-bg-opacity: 1;
-  background-color: rgb(250 204 21 / var(--tw-bg-opacity));
+  background-color: rgb(6 71 137 / var(--tw-bg-opacity));
 }
 
-.bg-slate-400 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(148 163 184 / var(--tw-bg-opacity));
+.bg-transparent {
+  background-color: transparent;
+}
+
+.bg-indigo\/70 {
+  background-color: rgb(6 71 137 / 0.7);
 }
 
 .bg-\[url\(\'\.\/images\/subtle_dots\.png\'\)\] {
@@ -915,9 +913,22 @@ body,
   padding-right: 0.5rem;
 }
 
+.pt-6 {
+  padding-top: 1.5rem;
+}
+
 .text-gray-800 {
   --tw-text-opacity: 1;
   color: rgb(31 41 55 / var(--tw-text-opacity));
+}
+
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.text-white\/100 {
+  color: rgb(255 255 255 / 1);
 }
 
 .opacity-0 {
@@ -981,9 +992,9 @@ body,
   cursor: pointer;
 }
 
-.hover\:text-yellow-400:hover {
+.hover\:text-lime:hover {
   --tw-text-opacity: 1;
-  color: rgb(250 204 21 / var(--tw-text-opacity));
+  color: rgb(232 224 0 / var(--tw-text-opacity));
 }
 
 .focus\:outline-none:focus {
@@ -996,8 +1007,16 @@ body,
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+.group:hover .group-hover\:bg-indigo\/70 {
+  background-color: rgb(6 71 137 / 0.7);
+}
+
 .group:hover .group-hover\:opacity-70 {
   opacity: 0.7;
+}
+
+.group:hover .group-hover\:opacity-100 {
+  opacity: 1;
 }
 
 @keyframes glow {

@@ -14,6 +14,10 @@ module.exports = {
       fontFamily: {
         sans: ["ruda", ...defaultTheme.fontFamily.sans],
       },
+      colors: {
+        'lime': '#e8e000',
+        'indigo': '#064789'
+      },
       animation: {
         'glow': 'glow 0.3s linear 1'
       },
