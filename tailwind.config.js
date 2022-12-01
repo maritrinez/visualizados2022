@@ -31,7 +31,7 @@ module.exports = {
         '3xl': '2100px',
       },
       aspectRatio: {
-        'traditional': '4 / 3',
+        'narrowscreen': '8 / 9',
         'widescreen': '21 / 9',
       }
     }

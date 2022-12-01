@@ -3,7 +3,7 @@
 @layer base {
     h1,
     .h1 {
-      @apply font-sans tracking-tight font-black mb-3 text-3xl md:text-4xl lg:text-5xl;
+      @apply font-sans tracking-tight font-black mb-3 text-4xl md:text-5xl lg:text-6xl;
     }
     
     h2,
@@ -24,7 +24,7 @@
     body,
     p,
     .p {
-      @apply font-sans mt-1 text-sm xs:text-base lg:text-lg;
+      @apply font-sans mt-1 text-base xs:text-lg lg:text-xl;
     }
 }
 @tailwind components;
