@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" class="scroll-smooth scroll-pt-48">
 
 <head>
   <meta charset="utf-8">
@@ -143,52 +143,123 @@
         </div>
       </header>
 
-      <section id="projects" class="">
-        <div class="layout">
-            <div class="grid grid-cols-7 gap-4">
-                <!-- title & tags -->
-                <div class="bg-teal-200 col-span-2 items-start">
-                   Titulo y tags
-                   <ul class="grid grid-cols-[auto_1fr] gap-x-4 items-center text-base">
-                    <li class="bg-grey-300">CLIENT</li>
-                    <li class="bg-grey-800">Residencia de Estudiantes</li>
-                    <li class="bg-grey-300">PARTNERS</li>
-                    <li class="bg-grey-800">Populate Tools</li>
-                    <li class="bg-grey-300">TOOLS</li>
-                    <li class="bg-grey-800">R; D3.js</li>
-                    <li class="bg-grey-300">AHORA TENGO UNA CLAVE LARGA  LARGA LARGA LARGA </li>
-                    <li class="bg-grey-800">corta</li>
+      <section id="projects">
+      <!-- projects carousel -->
+      <!-- https://css-tricks.com/css-only-carousel/ -->
 
-                    <li class="col-span-2">visit website **</li>
-                   </ul>
-                </div>
-
-                <!-- description -->
-                <div class="bg-red-200 col-span-3">
-                    descripción
-                </div>
+        <div class="layout overflow-hidden relative">
+            <nav class="flex scpace-x-2 items-center absolute top-0 right-0">
+                <a class="slider-nav" href="#sld1" aria-label="Go to slide 5">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" class="w-5 h-5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 12h-15m0 0l6.75 6.75M4.5 12l6.75-6.75" />
+                      </svg>                      
+                </a>
+                <h4>2/13</h4>
+                <a class="slider-nav" href="#sld3" aria-label="Go to slide 5">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" class="w-5 h-5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
+                      </svg>                      
+                </a>
+            </nav>
+            <ol class="slides flex overflow-x-auto snap-mandatory snap-x scroll-smooth">
+                <li id="sld1" class="shrink-0 snap-center w-full  bg-yellow-400 mx-4">
+                    <div class="grid grid-cols-7 gap-x-4">
+                         <!-- title & tags -->
+                         <div class="col-span-2 grid">
+                            <h3>Artists' conversations</h3>
+                        
+                            <ul class="self-end grid grid-cols-[auto_1fr] gap-x-4 gap-y-2 items-start text-base">
+                                <li class="justify-self-end">CLIENT</li>
+                                <li class="">Residencia de Estudiantes Residencia de Estudiantes</li>
+                                <li class="justify-self-end">PARTNERS</li>
+                                <li class="">Populate Tools</li>
+                                <li class="justify-self-end">TOOLS</li>
+                                <li class="">R; D3.js</li>
                 
-                <!-- counter -->
-                <div class="bg-green-200 col-span-2 justify-self-end">
-                    <h3>2/13</h3>
-                </div>
-
-            </div>
-
-            
-            
-
-            
-            
-            
-            
+                                <li class="col-span-2 self-end mt-6">visit website **</li>
+                            </ul>
+                        </div>
+                        <!-- description -->
+                        <div class="col-span-3">
+                            <p>This legendary Spanish cultural institution treasures thousands of letters from "La Edad de Plata", a golden age of Spanish culture in early 20th century. 
+                                They wanted to make them public, so I create a interactive data visualization to explore the connections between artists, the topics addressed in the letters, with the possibility of reading the whole conversation and be delighted by the way they used to write.
+                                This legendary Spanish c
+                                This legendary Spanish cultural institution treasures thousands of letters from "La Edad de Plata", a golden age of Spanish culture in early 20th century. 
+                            </p>
+                        </div>
+                    </div>
+                    <div class="h-[700px]">
+    
+                    </div>
+                </li>
+                <li id="sld2" class="shrink-0 snap-center w-full  bg-cyan-400 mx-4">
+                    <div class="grid grid-cols-7 gap-x-4">
+                         <!-- title & tags -->
+                         <div class="col-span-2 grid">
+                            <h3>Artists' conversations</h3>
+                        
+                            <ul class="self-end grid grid-cols-[auto_1fr] gap-x-4 gap-y-2 items-start text-base">
+                                <li class="justify-self-end">CLIENT</li>
+                                <li class="">Residencia de Estudiantes Residencia de Estudiantes</li>
+                                <li class="justify-self-end">PARTNERS</li>
+                                <li class="">Populate Tools</li>
+                                <li class="justify-self-end">TOOLS</li>
+                                <li class="">R; D3.js</li>
+                
+                                <li class="col-span-2 self-end mt-6">visit website **</li>
+                            </ul>
+                        </div>
+                        <!-- description -->
+                        <div class="col-span-3">
+                            <p>This legendary Spanish cultural institution treasures thousands of letters from "La Edad de Plata", a golden age of Spanish culture in early 20th century. 
+                                They wanted to make them public, so I create a interactive data visualization to explore the connections between artists, the topics addressed in the letters, with the possibility of reading the whole conversation and be delighted by the way they used to write.
+                                This legendary Spanish c
+                                This legendary Spanish cultural institution treasures thousands of letters from "La Edad de Plata", a golden age of Spanish culture in early 20th century. 
+                            </p>
+                        </div>
+                    </div>
+                    <div class="h-[700px]">
+    
+                    </div>
+                </li>
+                <li id="sld3" class="shrink-0 snap-center w-full  bg-pink-400 mx-4">
+                    <div class="grid grid-cols-7 gap-x-4">
+                         <!-- title & tags -->
+                         <div class="col-span-2 grid">
+                            <h3>Artists' conversations</h3>
+                        
+                            <ul class="self-end grid grid-cols-[auto_1fr] gap-x-4 gap-y-2 items-start text-base">
+                                <li class="justify-self-end">CLIENT</li>
+                                <li class="">Residencia de Estudiantes Residencia de Estudiantes</li>
+                                <li class="justify-self-end">PARTNERS</li>
+                                <li class="">Populate Tools</li>
+                                <li class="justify-self-end">TOOLS</li>
+                                <li class="">R; D3.js</li>
+                
+                                <li class="col-span-2 self-end mt-6">visit website **</li>
+                            </ul>
+                        </div>
+                        <!-- description -->
+                        <div class="col-span-3">
+                            <p>This legendary Spanish cultural institution treasures thousands of letters from "La Edad de Plata", a golden age of Spanish culture in early 20th century. 
+                                They wanted to make them public, so I create a interactive data visualization to explore the connections between artists, the topics addressed in the letters, with the possibility of reading the whole conversation and be delighted by the way they used to write.
+                                This legendary Spanish c
+                                This legendary Spanish cultural institution treasures thousands of letters from "La Edad de Plata", a golden age of Spanish culture in early 20th century. 
+                            </p>
+                        </div>
+                    </div>
+                    <div class="h-[700px]">
+    
+                    </div>
+                </li>
+            </ol>
         </div>
-      </section>
+      
+    </section>
+
     </div>
 
-
-
-    <footer class="p-9 z-30 fixed bottom-0 w-full">
+    <footer class="p-9 z-30 static bottom-0 w-full">
       <div class="layout border-t border-t-slate-300">
         Let's make something together
       </div>
