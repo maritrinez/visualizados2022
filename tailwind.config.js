@@ -14,6 +14,7 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ["ruda", ...defaultTheme.fontFamily.sans],
+        prose: ["Space Grotesk", ...defaultTheme.fontFamily.sans]
       },
       colors: {
         'lime': '#e8e000',

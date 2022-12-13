@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500&display=swap');
+
 @tailwind base;
 /* https://theodorusclarence.com/blog/tailwindcss-best-practice */
 @layer base {
@@ -8,7 +10,7 @@
     
     h2,
     .h2 {
-      @apply font-sans text-xl font-bold md:text-3xl;
+      @apply font-sans text-lg xs:text-2xl font-black lg:text-3xl;
     }
     
     h3,
@@ -18,13 +20,21 @@
     
     h4,
     .h4 {
-      @apply font-sans text-base font-bold md:text-lg;
+      @apply font-sans text-sm xs:text-base font-bold md:text-lg;
     }
     
     body,
     p,
     .p {
-      @apply font-sans mt-1 text-base xs:text-lg lg:text-xl;
+      @apply font-prose mt-1 font-light text-base xs:text-lg lg:text-xl;
+    }
+
+    .p-small {
+      @apply font-prose mt-1 font-light text-base lg:text-lg;
+    }
+
+    .p-xsmall {
+      @apply font-prose font-light text-xs lg:text-sm;
     }
 }
 @tailwind components;
