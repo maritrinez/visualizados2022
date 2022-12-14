@@ -13,7 +13,7 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        sans: ["ruda", ...defaultTheme.fontFamily.sans],
+        sans: ["Ruda", ...defaultTheme.fontFamily.sans],
         prose: ["Space Grotesk", ...defaultTheme.fontFamily.sans]
       },
       colors: {
