@@ -12,13 +12,24 @@ window.addEventListener('DOMContentLoaded', (event) => {
   document.getElementById("close-whoami").addEventListener("click", toggleWhoami, false);
 
   // MAILTO copy & reset tooltip message
-  document.getElementById("mailto-link").addEventListener("click", (event) => {copyToClipboard(event)}, false);
+  const mailtos = document.querySelectorAll('.mailto-link');
+ 
+  mailtos.forEach(mailto => {
+    // mailto.addEventListener('pointerdown', (event) => {
 
-  document.getElementById("mailto-link").addEventListener("mouseout", (event) => {
-    setTimeout(() => {
-      document.getElementById("mailto-message").innerHTML = 'Click to copy email address';
-    }, "200")
-  }, false);
+    //   if (event.pointerType === "mouse") {copyToClipboard(event)}
+    //   if (event.pointerType === "touch") {console.log('touch');}
+
+    // }, false);
+
+
+    mailto.addEventListener("click", (event) => {copyToClipboard(event)}, false);
+    mailto.addEventListener("mouseout", (event) => {
+      setTimeout(() => {
+        event.target.querySelector("#mailto-message").innerHTML = 'Click to copy email address';
+      }, "200")
+    }, false);
+  });
   
 });
 
@@ -120,12 +131,14 @@ function toggleWhoami () {
 // - - - COPY MAIL
 // https://codepen.io/eclarrrk/pen/ZZywZv
 function copyToClipboard(e) {
+  if (e.pointerType != 'mouse') return;
+  
   // Disable opening the email client.
   e.preventDefault();
   
   // Get the email text
-  const str = e.target.text;
-
+  const str = e.target.dataset.mail;
+  
   // Create a hidden element and copy the text to the clipboard
   var dummy = document.createElement("input");
   document.body.appendChild(dummy);
@@ -135,5 +148,6 @@ function copyToClipboard(e) {
   document.body.removeChild(dummy);
 
   // Update tooltip message
-  document.getElementById("mailto-message").innerHTML = 'Email address copied to clipboard';
+  e.target.querySelector("#mailto-message").innerHTML = "Email copied to clipboard !!";
 }
+

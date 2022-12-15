@@ -26,7 +26,7 @@
 
         <div class="grid-container pt-16 grid gap-12 grid-cols-1 md:grid-flow-col md:grid-cols-3">
           <div class="pic max-w-sm place-self-center md:place-self-start">
-            <img class="" src="./assets/images/scs/avatar.png">
+            <img class="" src="./assets/images/avatar.png">
           </div>
           
           <div class="text fl-text-base space-y-6 md:col-span-2">
@@ -39,10 +39,20 @@
             <p>One year later I started my career as a Data Visualizer.</p>
             <p>Currently, I work creating unique, made-to-order data visualizations, expressly designed for a specific dataset, so I mainly work with static data, no matter how big or small. I also create reusable data visualizations, for those datasets with identical structure but different content.</p>
             <p>I love mails, hearing about new projects and challenges so Feel free to contact me with any questions, any data project or even just to say hello</p>
-            <div class="relative flex-col items-center justify-center">
-              <a id="mailto-link" class="peer fl-text-3xl" href="mailto:beatriz@visualizados.com">beatriz@visualizados.com</a>
-              <p id="mailto-message" class="absolute bottom-0 mb-12 bg-orange-400 opacity-0 transition-opacity duration-300 peer-hover:opacity-100">Click to copy email address</p>
-            </div>
+            
+            <!-- Mail starts here -->
+            <a class="mailto-link group max-w-fit flex flex-col items-end justify-end" href="mailto:beatriz@visualizados.com" data-mail="beatriz@visualizados.com">
+              <!-- Tooltip here -->
+              <div id="mailto-message" class="tooltip-top relative mb-2 px-2 py-[0.1rem] text-sm text-black bg-lime opacity-0 transition-all duration-300 md:group-hover:opacity-100 pointer-events-none">
+                Click to copy email address
+              </div>
+              
+              <!-- Icon/text goes here -->
+              <p class="mt-0 underline decoration-pink-600 decoration-dashed decoration-4 text-xl xs:text-2xl md:text-3xl pointer-events-none">beatriz@visualizados.com</p>
+              
+            </a>
+            <!-- Mail ends here -->
+
           </div>    
         </div>
       </div>
@@ -154,7 +164,7 @@
 
       <section id="work" class="">
         <div class="layout grid grid-cols-1 pt-6 gap-y-6 gap-x-6 sm:grid-cols-2 3xl:grid-cols-4 2xl:gap-x-8 2xl:gap-y-8 mx-auto">
-          <a href="#" class="group relative">
+          <a href="./projects.html" class="group relative">
             <div class="aspect-w-1 aspect-h-1 w-full overflow-hidden">
               <img src="./assets/images/scs/ep_home_detail.png" alt="" class="h-full w-full object-cover object-center">
             </div>
@@ -252,13 +262,20 @@
               <a class="mx-2 hover:animate-glow hover:text-lime" href="https://www.linkedin.com/in/mtnez/" target="_blank">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="w-4 h-4"><!--! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path fill="currentColor" d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"/></svg>
               </a>
-               <!-- mail -->
-               <a class="mx-2 hover:animate-glow hover:text-lime" href="https://www.linkedin.com/in/mtnez/" target="_blank">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="peer w-5 h-5">
+
+              <!-- Mail starts here -->
+              <a class="mailto-link group relative mx-2 flex flex-col items-center justify-center" href="mailto:beatriz@visualizados.com" data-mail="beatriz@visualizados.com">
+                <!-- Icon goes here -->
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="peer w-5 h-5 group-hover:animate-glow group-hover:text-lime pointer-events-none">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
                 </svg>
-                <p id="mailto-message" class="absolute bottom-0 mb-12 bg-orange-400 opacity-0 transition-opacity duration-300 peer-hover:opacity-100">Click to copy email address</p>                
+                <!-- Tooltip here -->
+                <div id="mailto-message" class="tooltip-right absolute bottom-0 left-8 origin-bottom min-w-max px-2 py-[0.1rem] text-sm text-black bg-lime opacity-0 transition-all duration-300 md:group-hover:opacity-100 pointer-events-none">
+                  Click to copy email address
+                </div>
               </a>
+              <!-- Mail ends here -->
+            
             </div>
             <div class="font-sans text-xs opacity-30 md:text-sm">visualizados.com &copy; 2023</div>
         </div>
