@@ -1,6 +1,9 @@
 const defaultTheme = require("tailwindcss/defaultTheme");
 
 module.exports = {
+  future: {
+    hoverOnlyWhenSupported: true,
+  },
   content: [
     "./public/index.html",
     "./public/*.{html,js}",

@@ -15,16 +15,12 @@ window.addEventListener('DOMContentLoaded', (event) => {
   const mailtos = document.querySelectorAll('.mailto-link');
  
   mailtos.forEach(mailto => {
-    // mailto.addEventListener('pointerdown', (event) => {
-
-    //   if (event.pointerType === "mouse") {copyToClipboard(event)}
-    //   if (event.pointerType === "touch") {console.log('touch');}
-
-    // }, false);
-
-
     mailto.addEventListener("click", (event) => {copyToClipboard(event)}, false);
-    mailto.addEventListener("mouseout", (event) => {
+
+    mailto.addEventListener("mouseleave", (event) => {
+      event.target.querySelector("#mailto-message").classList.add("opacity-0");
+      event.target.querySelector("svg").classList.remove("animate-glow");
+      event.target.querySelector("svg").classList.remove("text-lime");
       setTimeout(() => {
         event.target.querySelector("#mailto-message").innerHTML = 'Click to copy email address';
       }, "200")
@@ -131,6 +127,8 @@ function toggleWhoami () {
 // - - - COPY MAIL
 // https://codepen.io/eclarrrk/pen/ZZywZv
 function copyToClipboard(e) {
+  e.target.querySelector("svg").classList.add("animate-glow");
+  e.target.querySelector("svg").classList.add("text-lime");
   if (e.pointerType != 'mouse') return;
   
   // Disable opening the email client.
@@ -150,4 +148,5 @@ function copyToClipboard(e) {
   // Update tooltip message
   e.target.querySelector("#mailto-message").innerHTML = "Email copied to clipboard !!";
 }
+
 
