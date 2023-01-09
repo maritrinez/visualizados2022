@@ -1103,6 +1103,11 @@ body,
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.bg-black{
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+
 .bg-indigo{
   --tw-bg-opacity: 1;
   background-color: rgb(6 71 137 / var(--tw-bg-opacity));
@@ -1116,11 +1121,6 @@ body,
 .bg-pink-400{
   --tw-bg-opacity: 1;
   background-color: rgb(244 114 182 / var(--tw-bg-opacity));
-}
-
-.bg-black{
-  --tw-bg-opacity: 1;
-  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 
 .bg-\[url\(\'\.\/images\/subtle_dots\.png\'\)\]{
@@ -1236,28 +1236,8 @@ body,
   color: rgb(232 224 0 / var(--tw-text-opacity));
 }
 
-.underline{
-  text-decoration-line: underline;
-}
-
-.decoration-pink-600{
-  text-decoration-color: #db2777;
-}
-
-.decoration-dashed{
-  text-decoration-style: dashed;
-}
-
-.decoration-4{
-  text-decoration-thickness: 4px;
-}
-
 .opacity-0{
   opacity: 0;
-}
-
-.opacity-100{
-  opacity: 1;
 }
 
 .opacity-30{
@@ -1370,6 +1350,97 @@ body,
 
 .slides::-webkit-scrollbar {
   display: none;
+}
+
+/* links animation */
+
+/* #home-whoami {
+  text-transform: uppercase;
+  font-weight: 900;
+  text-decoration: none;
+  color: white;
+  display: inline-block;
+  background-size: 120% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+  -ms-background-clip: text;
+  -ms-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  background-image: linear-gradient(45deg, 
+                    #7794ff, 
+                    #44107A,
+                    #FF1361,
+                    #FFF800);
+  animation: .8s shake infinite alternate;
+} */
+
+.underline-link {
+  text-transform: uppercase;
+  overflow: hidden;
+  /* font-weight: 500; */
+  background-image: url(./images/underline.svg);
+  background-position: 100% 110%;
+  background-size: auto 0.35em;
+  background-repeat: repeat-x;
+  animation: gradient 10s linear infinite;
+}
+
+.underline-link:hover {
+  animation: none;
+  cursor:pointer
+}
+
+.underline-link-slow {
+  overflow: hidden;
+  /* font-weight: 500; */
+  background-image: url(./images/underline.svg);
+  background-position: 100% 110%;
+  background-size: auto 0.35em;
+  background-repeat: repeat-x;
+  animation: gradient 20s linear infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 100% 110%;
+  }
+
+  50% {
+    background-position: 50% 110%;
+  }
+
+  100% {
+    background-position: 0% 110%;
+  }
+}
+
+@keyframes shake {
+  0% {
+    transform: skewX(-15deg);
+  }
+
+  5% {
+    transform: skewX(15deg);
+  }
+
+  10% {
+    transform: skewX(-15deg);
+  }
+
+  15% {
+    transform: skewX(15deg);
+  }
+
+  20% {
+    transform: skewX(0deg);
+  }
+
+  100% {
+    transform: skewX(0deg);
+  }
 }
 
 @media (hover: hover) and (pointer: fine){
@@ -1618,24 +1689,5 @@ body,
   .\33xl\:grid-cols-4{
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
-}
-
-@keyframes glow{
-  0%, 100%{
-    transform: perspective(1px) translateZ(0);
-  }
-
-  50%{
-    transform: scale(1.2);
-  }
-}
-
-.\[\&\:hover\]\:animate-glow:hover{
-  animation: glow 0.3s linear 1;
-}
-
-.\[\&\:hover\]\:text-lime:hover{
-  --tw-text-opacity: 1;
-  color: rgb(232 224 0 / var(--tw-text-opacity));
 }
 

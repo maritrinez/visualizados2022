@@ -13,14 +13,17 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
   // MAILTO copy & reset tooltip message
   const mailtos = document.querySelectorAll('.mailto-link');
- 
   mailtos.forEach(mailto => {
     mailto.addEventListener("click", (event) => {copyToClipboard(event)}, false);
 
     mailto.addEventListener("mouseleave", (event) => {
       event.target.querySelector("#mailto-message").classList.add("opacity-0");
-      event.target.querySelector("svg").classList.remove("animate-glow");
-      event.target.querySelector("svg").classList.remove("text-lime");
+
+      event.target.querySelectorAll("svg").forEach(function(item) {
+        item.classList.remove("animate-glow");
+        item.classList.remove("text-lime");
+      });
+;
       setTimeout(() => {
         event.target.querySelector("#mailto-message").innerHTML = 'Click to copy email address';
       }, "200")
@@ -127,8 +130,11 @@ function toggleWhoami () {
 // - - - COPY MAIL
 // https://codepen.io/eclarrrk/pen/ZZywZv
 function copyToClipboard(e) {
-  e.target.querySelector("svg").classList.add("animate-glow");
-  e.target.querySelector("svg").classList.add("text-lime");
+  e.target.querySelectorAll("svg").forEach(function(item) {
+    item.classList.add("animate-glow");
+    item.classList.add("text-lime");
+  });
+  
   if (e.pointerType != 'mouse') return;
   
   // Disable opening the email client.
