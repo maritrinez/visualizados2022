@@ -90,7 +90,7 @@
                       </svg>                      
                 </a>
                 <h4>2/13</h4>
-                <a class="slider-nav" href="#sld3" aria-label="Go to slide 5">
+                <a class="slider-nav" href="#sld2" aria-label="Go to slide 5">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" class="w-4 h-4 md:w-5 md:h-5">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
                       </svg>                      
@@ -130,9 +130,10 @@
                     </div>
                 </div>
                 <!-- PICS! -->
-                <div class="grid grid-cols-1 gap-4 mt-12 md:grid-cols-6 md:mt-28">
+                <!-- https://medium.com/@axel/mosaic-layouts-with-css-grid-d13f4e3ed2ae -->
+                <div class="ods grid grid-cols-1 gap-1 mt-12 p-1 md:grid-cols-6 md:mt-28 bg-black">
                   <figure class="md:col-span-4 md:row-span-2">
-                    <img src="./assets/images/scs/epistolas_home.png" alt="Conversations home screen" loading="lazy">
+                    <img src="./assets/images/scs/ep_home.png" alt="Conversations home screen" loading="lazy">
                   </figure>
                   <figure class="md:col-span-2">
                     <img src="./assets/images/scs/ep_home_detail.png" alt="Conversations home screen" loading="lazy">
@@ -141,73 +142,86 @@
                     <!-- <img src="./assets/images/scs/ep_beeswarm_detail.png" alt="Conversations home screen" loading="lazy"> -->
                     <img src="./assets/images/scs/ep_conversation.png" alt="Conversations home screen" loading="lazy">
                   </figure>
-                  <video class="md:col-span-3" autoplay="" loop="" playsinline="" muted="">
-                    <source src="./assets/images/scs/moving.mov" type="video/mp4">
+                  <video class="md:col-span-4" autoplay loop playsinline muted>
+                    <source src="./assets/images/scs/ep_moving.mov" type="video/mp4">
                   </video>
-                  <figure class="md:col-span-3">
+                  <figure class="md:col-span-2">
                     <img src="./assets/images/scs/ep_letter.png" alt="Conversations home screen" loading="lazy">
                   </figure>
                 </div>
               </li>
 
-
-                <li id="sld2" data-index="2" class="shrink-0 snap-center w-full  bg-cyan-400 mx-4">
-                  <div class="grid grid-cols-1 gap-y-4   md:grid-cols-7 md:gap-x-4">
-                    <!-- title & tags -->
-                    <div class="col-span-2 grid gap-y-2 md:gap-y-4">
-                       <h2>Artists' conversations</h2>
-                   
-                       <ul class="self-end grid grid-cols-[auto_1fr] gap-x-2 gap-y-1 items-start mt-4 p-xsmall md:gap-x-4">
-                           <li class="font-medium">CLIENT</li>
-                           <li class="">Residencia de Estudiantes</li>
-                           <li class="font-medium">PARTNERS</li>
-                           <li class="">Populate Tools</li>
-                           <li class="font-medium">TOOLS</li>
-                           <li class="">R; D3.js</li>
-           
-                           <li class="col-span-2 self-end mt-6 p-small font-medium">visit website **</li>
-                       </ul>
-                    </div>
-                    <!-- description -->
-                    <div class="col-span-3 p-small">
-                        This legendary Spanish cultural institution treasures thousands of letters from "La Edad de Plata", a golden age of Spanish culture in early 20th century. <br>
-                        Es una delicia leerlas. Querían publicar el un conjunto limitado y mostrar qué cartas tenia, qué personas estaban implicadas en las conversaciones y ofrecer la psbilidad de deleitarse leyendo las propias cartas.
-                    </div>
+              <!-- ## ODS ## --> 
+              <li id="sld2" data-index="2" class="shrink-0 snap-center w-full">
+                <div class="grid grid-cols-1 gap-y-4   md:grid-cols-7 md:gap-x-4">
+                  <!-- title & tags -->
+                  <div class="col-span-2 grid gap-y-2 md:gap-y-4">
+                      <h2>ODS Performance</h2>
+                      <ul class="self-end grid grid-cols-[auto_1fr] gap-x-2 gap-y-1 items-start mt-4 p-xsmall md:gap-x-4">
+                          <li class="font-medium">CLIENT</li>
+                          <li class="">Smart & Cities</li>
+                          <li class="font-medium">TOOLS</li>
+                          <li class="">R; D3.js</li>
+                      </ul>
+                  </div>
+                  <!-- description -->
+                  <div class="col-span-3 p-small">
+                      This legendary Spanish cultural institution treasures thousands of letters from "La Edad de Plata", a golden age of Spanish culture in early 20th century. <br>
+                      Es una delicia leerlas. Querían publicar el un conjunto limitado y mostrar qué cartas tenia, qué personas estaban implicadas en las conversaciones y ofrecer la psbilidad de deleitarse leyendo las propias cartas.
+                  </div>
+                </div>
+                <!-- PICS! -->
+                <!-- https://medium.com/@axel/mosaic-layouts-with-css-grid-d13f4e3ed2ae -->
+                <div class=" bg-black">
+                  <div class="ods grid grid-cols-1 gap-1 px-1 pt-1 mt-12 md:grid-cols-6 md:mt-28">
+                    <figure class="md:col-span-4 md:row-span-2">
+                      <img class="" src="./assets/images/scs/ods_home.png" alt="Conversations home screen" loading="lazy">
+                    </figure>
+                    <figure class="sm md:col-span-2 md:row-span-4">
+                      <img src="./assets/images/scs/ods_sm.png" alt="Conversations home screen" loading="lazy">
+                    </figure>
+                    <video class="home-video md:col-span-2 md:w-[99.9%]" autoplay loop playsinline muted>
+                      <source src="./assets/images/scs/ods_home_moving.mov" type="video/mp4">
+                    </video>
+                    <video class="sm-video md:col-span-2 md:w-[99.9%]" autoplay loop playsinline muted>
+                      <source src="./assets/images/scs/ods_sm_moving.mov" type="video/mp4">
+                    </video>
+                    
+                  </div>
+                </div>
+              </li>
+                
+                
+              <li id="sld3" data-index="3" class="shrink-0 snap-center w-full  bg-pink-400 mx-4">
+                  <div class="grid grid-cols-7 gap-x-4">
+                        <!-- title & tags -->
+                        <div class="col-span-2 grid">
+                          <h3>Artists' conversations</h3>
+                      
+                          <ul class="self-end grid grid-cols-[auto_1fr] gap-x-4 gap-y-2 items-start text-base">
+                              <li class="justify-self-end">CLIENT</li>
+                              <li class>Residencia de Estudiantes Residencia de Estudiantes</li>
+                              <li class="justify-self-end">PARTNERS</li>
+                              <li class="">Populate Tools</li>
+                              <li class="justify-self-end">TOOLS</li>
+                              <li class="">R; D3.js</li>
+              
+                              <li class="col-span-2 self-end mt-6">visit website **</li>
+                          </ul>
+                      </div>
+                      <!-- description -->
+                      <div class="col-span-3">
+                          <p>This legendary Spanish cultural institution treasures thousands of letters from "La Edad de Plata", a golden age of Spanish culture in early 20th century. 
+                              They wanted to make them public, so I create a interactive data visualization to explore the connections between artists, the topics addressed in the letters, with the possibility of reading the whole conversation and be delighted by the way they used to write.
+                              This legendary Spanish c
+                              This legendary Spanish cultural institution treasures thousands of letters from "La Edad de Plata", a golden age of Spanish culture in early 20th century. 
+                          </p>
+                      </div>
                   </div>
                   <div class="h-[700px]">
-
+  
                   </div>
-                </li>
-                <li id="sld3" data-index="3" class="shrink-0 snap-center w-full  bg-pink-400 mx-4">
-                    <div class="grid grid-cols-7 gap-x-4">
-                         <!-- title & tags -->
-                         <div class="col-span-2 grid">
-                            <h3>Artists' conversations</h3>
-                        
-                            <ul class="self-end grid grid-cols-[auto_1fr] gap-x-4 gap-y-2 items-start text-base">
-                                <li class="justify-self-end">CLIENT</li>
-                                <li class="">Residencia de Estudiantes Residencia de Estudiantes</li>
-                                <li class="justify-self-end">PARTNERS</li>
-                                <li class="">Populate Tools</li>
-                                <li class="justify-self-end">TOOLS</li>
-                                <li class="">R; D3.js</li>
-                
-                                <li class="col-span-2 self-end mt-6">visit website **</li>
-                            </ul>
-                        </div>
-                        <!-- description -->
-                        <div class="col-span-3">
-                            <p>This legendary Spanish cultural institution treasures thousands of letters from "La Edad de Plata", a golden age of Spanish culture in early 20th century. 
-                                They wanted to make them public, so I create a interactive data visualization to explore the connections between artists, the topics addressed in the letters, with the possibility of reading the whole conversation and be delighted by the way they used to write.
-                                This legendary Spanish c
-                                This legendary Spanish cultural institution treasures thousands of letters from "La Edad de Plata", a golden age of Spanish culture in early 20th century. 
-                            </p>
-                        </div>
-                    </div>
-                    <div class="h-[700px]">
-    
-                    </div>
-                </li>
+              </li>
             </ol>
         </div>
       

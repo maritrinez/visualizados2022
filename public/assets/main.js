@@ -2,7 +2,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
   
   // First load
   firstLoad("menu")
-  firstLoad("whoami")
+  // firstLoad("whoami")
   
   // Apply interaction
   document.getElementById("menu-button").addEventListener("click", toggleNav, false);

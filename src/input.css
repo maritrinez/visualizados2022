@@ -191,3 +191,26 @@
   100% { transform: skewX(0deg); }  
 }
 
+
+/* projects templates */
+/* .ods {
+  grid-template-areas: 
+    "home home home home home-video home-video" 
+    "home home home home sm sm" 
+    ". . sm-video sm-video sm sm" 
+    ". . . . sm sm";
+}
+
+.home {
+  grid-area: home;  
+}
+.home-video {
+  grid-area: home-video;  
+}
+.sm {
+  grid-area: sm;  
+}
+.sm-video {
+  grid-area: sm-video;  
+} */
+
