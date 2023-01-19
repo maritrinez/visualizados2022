@@ -131,55 +131,45 @@
                 </div>
                 <!-- PICS! -->
                 <!-- https://medium.com/@axel/mosaic-layouts-with-css-grid-d13f4e3ed2ae -->
-                <div class="g-w grid grid-cols-1 gap-1 mt-12 p-1 md:grid-cols-6 md:mt-28 bg-black">
-                  <!-- QUITAR LOS DIV CONTENEDORES DE LAS FIGURES Y PASAR LAS CSS A TAILWIND!! -->
-                  <!-- IÁGENES DE SKETCH, NO HACE FALTA EL CROPPED!! -->
-                  <div class="item item01">
-                    <figure class="w-full">
-                      <img src="./assets/images/scs/ep_home.png" alt="Conversations home screen" loading="lazy">
-                    </figure>
-                  </div>
+          
+                grid-template-columns: repeat(4, 1fr);
+                grid-template-rows: repeat(5, 1fr);
+                grid-gap: 4px;
+                aspect-ratio: 1 / 1.15;
+                <div class="grid grid-cols-1 gap-1 mt-12 p-1 w-full md:aspect-[1/1.15] md:grid-cols-6 md:grid-rows-5 md:mt-28 bg-black">
+                  <!-- ARREGLAR IMÁGENES DE SKETCH, NO HACE FALTA EL CROPPED!! -->
                   
-                  <div class="item item02">
-                    <figure class="w-full">
-                      <img src="./assets/images/scs/ep_home_detail_prueba.png" alt="Conversations home screen" loading="lazy">
-                    </figure>
-                  </div>
+                  <figure class="overflow-hidden md:col-span-4 md:row-span-2">
+                    <img src="./assets/images/scs/ep_home.png" alt="Conversations home screen" loading="lazy">
+                  </figure>
                   
-                  <div class="item item03">
-                    <figure class="md:col-span-2">
-                      <!-- <img src="./assets/images/scs/ep_beeswarm_detail.png" alt="Conversations home screen" loading="lazy"> -->
-                      <img src="./assets/images/scs/ep_home_conversation_cropped.png" alt="Conversations home screen" loading="lazy">
-                    </figure>
-                  </div>
-                  
-                  <div class="item item04">
+                  <figure class="overflow-hidden md:col-span-2">
+                    <img src="./assets/images/scs/ep_home_detail_prueba.png" alt="Conversations home screen" loading="lazy">
+                  </figure>
+            
+                  <figure class="overflow-hidden md:col-span-2">        
+                    <img src="./assets/images/scs/ep_home_conversation_cropped.png" alt="Conversations home screen" loading="lazy">
+                  </figure>
+            
+                  <!-- el video tiene que ir en un div para que haga el cropped -->
+                  <div class="overflow-hidden md:col-span-4 md:row-span-2">
                     <video class="w-full" autoplay loop playsinline muted>
                       <source src="./assets/images/scs/ep_moving.mov" type="video/mp4">
                     </video>
                   </div>
-                  
-                  <figure class="item item05">
+                
+                  <figure class="overflow-hidden md:col-span-2 md:row-span-3">
                     <img src="./assets/images/scs/ep_letter.png" alt="Conversations home screen" loading="lazy">
                   </figure>
 
-                  <div class="item item06">
-                    <figure class="w-full">
-                      <img src="./assets/images/scs/ep_home_detail_prueba.png" alt="Conversations home screen" loading="lazy">
-                    </figure>
-                  </div>
-                  
-                  <div class="item item07">
-                    <figure class="">
-                      <!-- <img src="./assets/images/scs/ep_beeswarm_detail.png" alt="Conversations home screen" loading="lazy"> -->
-                      <img src="./assets/images/scs/ep_home_conversation_cropped.png" alt="Conversations home screen" loading="lazy">
-                    </figure>
-                  </div>
-
-                  
-                </div>
-
+                  <figure class="overflow-hidden md:col-span-2">
+                    <img src="./assets/images/scs/ep_home_detail_prueba.png" alt="Conversations home screen" loading="lazy">
+                  </figure>
                 
+                  <figure class="overflow-hidden md:col-span-2">
+                    <img src="./assets/images/scs/ep_home_conversation_cropped.png" alt="Conversations home screen" loading="lazy">
+                  </figure>
+                </div>
               </li>
 
               <!-- ## ODS ## --> 
@@ -225,35 +215,36 @@
                 
               <!-- ## CONVERSATIONS ## -->  
               <li id="sld3" data-index="1" class="current shrink-0 snap-center w-full mx-4 bg-pink-500">
+                <!-- INTRO! -->
                 <div class="grid grid-cols-1 gap-y-4   md:grid-cols-6 md:gap-x-4 xl:grid-cols-7">
-                      <!-- title & tags -->
-                      <div class="col-span-2 grid gap-y-4">
-                        <h2>Artists' conversations</h2>
-                    
-                        <ul class="self-end grid grid-cols-[auto_1fr] gap-x-2 gap-y-1 items-start p-xsmall md:gap-x-4">
-                            <li class="font-medium">CLIENT</li>
-                            <li class="">Residencia de Estudiantes</li>
-                            <li class="font-medium">PARTNERS</li>
-                            <li class="">Populate Tools</li>
-                            <li class="font-medium">TOOLS</li>
-                            <li class="">R; D3.js</li>
-            
-                            <li class="col-span-2 self-end mt-6 p-small font-medium">
-                              <a href="http://epistolas.edaddeplata.org/#/" target="_blank" class="inline-flex items-center group hover:text-lime">
-                                <span>View website</span>
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="ml-1 w-5 h-5 group-hover:animate-glow">
-                                  <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
-                                </svg>
-                                
-                              </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <!-- description -->
-                    <div class="col-span-3">
-                        <p>This legendary Spanish cultural institution treasures thousands of letters from "La Edad de Plata", a golden age of Spanish culture in early 20th century.</p>
-                        <p>Es una delicia leerlas. Querían publicar el un conjunto limitado y mostrar qué cartas tenia, qué personas estaban implicadas en las conversaciones y ofrecer la psbilidad de deleitarse leyendo las propias cartas.</p>
-                    </div>
+                  <!-- title & tags -->
+                  <div class="col-span-2 grid gap-y-4">
+                      <h2>Artists' conversations</h2>
+                  
+                      <ul class="self-end grid grid-cols-[auto_1fr] gap-x-2 gap-y-1 items-start p-xsmall md:gap-x-4">
+                          <li class="font-medium">CLIENT</li>
+                          <li class="">Residencia de Estudiantes</li>
+                          <li class="font-medium">PARTNERS</li>
+                          <li class="">Populate Tools</li>
+                          <li class="font-medium">TOOLS</li>
+                          <li class="">R; D3.js</li>
+          
+                          <li class="col-span-2 self-end mt-6 p-small font-medium">
+                            <a href="http://epistolas.edaddeplata.org/#/" target="_blank" class="inline-flex items-center group hover:text-lime">
+                              <span>View website</span>
+                              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="ml-1 w-5 h-5 group-hover:animate-glow">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
+                              </svg>
+                              
+                            </a>
+                          </li>
+                      </ul>
+                  </div>
+                  <!-- description -->
+                  <div class="col-span-3">
+                      <p>This legendary Spanish cultural institution treasures thousands of letters from "La Edad de Plata", a golden age of Spanish culture in early 20th century.</p>
+                      <p>Es una delicia leerlas. Querían publicar el un conjunto limitado y mostrar qué cartas tenia, qué personas estaban implicadas en las conversaciones y ofrecer la psbilidad de deleitarse leyendo las propias cartas.</p>
+                  </div>
                 </div>
                 <!-- PICS! -->
                 <!-- https://medium.com/@axel/mosaic-layouts-with-css-grid-d13f4e3ed2ae -->
