@@ -975,6 +975,10 @@ body,
   gap: 0.25rem;
 }
 
+.gap-4{
+  gap: 1rem;
+}
+
 .gap-y-6{
   row-gap: 1.5rem;
 }
