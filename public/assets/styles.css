@@ -867,6 +867,10 @@ body,
   width: 1.5rem;
 }
 
+.w-11\/12{
+  width: 91.666667%;
+}
+
 .min-w-max{
   min-width: -moz-max-content;
   min-width: max-content;
@@ -1626,6 +1630,10 @@ body,
     margin-top: 7rem;
   }
 
+  .md\:mb-28{
+    margin-bottom: 7rem;
+  }
+
   .md\:aspect-\[1\/1\.15\]{
     aspect-ratio: 1/1.15;
   }
@@ -1644,6 +1652,10 @@ body,
 
   .md\:aspect-\[1\/0\.86\]{
     aspect-ratio: 1/0.86;
+  }
+
+  .md\:aspect-\[1\/0\.464\]{
+    aspect-ratio: 1/0.464;
   }
 
   .md\:h-5{
@@ -1688,6 +1700,10 @@ body,
 
   .md\:grid-rows-4{
     grid-template-rows: repeat(4, minmax(0, 1fr));
+  }
+
+  .md\:grid-rows-2{
+    grid-template-rows: repeat(2, minmax(0, 1fr));
   }
 
   .md\:gap-x-4{
