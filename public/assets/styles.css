@@ -1608,6 +1608,10 @@ body,
     grid-column: span 3 / span 3;
   }
 
+  .md\:col-span-1{
+    grid-column: span 1 / span 1;
+  }
+
   .md\:row-span-2{
     grid-row: span 2 / span 2;
   }
@@ -1622,6 +1626,14 @@ body,
 
   .md\:row-span-3{
     grid-row: span 3 / span 3;
+  }
+
+  .md\:row-span-5{
+    grid-row: span 5 / span 5;
+  }
+
+  .md\:row-span-6{
+    grid-row: span 6 / span 6;
   }
 
   .md\:mt-28{
@@ -1654,6 +1666,14 @@ body,
 
   .md\:aspect-\[1\/0\.9\]{
     aspect-ratio: 1/0.9;
+  }
+
+  .md\:aspect-\[1\/1\]{
+    aspect-ratio: 1/1;
+  }
+
+  .md\:aspect-\[1\/0\.92\]{
+    aspect-ratio: 1/0.92;
   }
 
   .md\:h-5{
@@ -1702,6 +1722,10 @@ body,
 
   .md\:grid-rows-3{
     grid-template-rows: repeat(3, minmax(0, 1fr));
+  }
+
+  .md\:grid-rows-6{
+    grid-template-rows: repeat(6, minmax(0, 1fr));
   }
 
   .md\:gap-x-4{
