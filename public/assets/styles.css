@@ -1676,6 +1676,14 @@ body,
     aspect-ratio: 1/0.92;
   }
 
+  .md\:aspect-\[1\/0\.7\]{
+    aspect-ratio: 1/0.7;
+  }
+
+  .md\:aspect-\[1\/0\.67\]{
+    aspect-ratio: 1/0.67;
+  }
+
   .md\:h-5{
     height: 1.25rem;
   }
@@ -1706,6 +1714,10 @@ body,
 
   .md\:grid-cols-10{
     grid-template-columns: repeat(10, minmax(0, 1fr));
+  }
+
+  .md\:grid-cols-4{
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
   .md\:grid-rows-4{
