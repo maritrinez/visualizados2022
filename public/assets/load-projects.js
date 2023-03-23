@@ -9,7 +9,7 @@ const classes = {
     strength: 'flex space-x-1'
 }
 
-d3.csv('./assets/visualizados_projects.csv').then((data) => {
+d3.csv('https://docs.google.com/spreadsheets/d/e/2PACX-1vQoVPZ9h7hN0Ckh41FKH2k42RaS-NGcJzHSVB_kl6GhF-AiaGHmm3JMwNfViiTDS0xeiIV-H0zxNGsd/pub?output=csv').then((data) => {
     console.log(data)
 
     // sort the data by order
@@ -20,8 +20,7 @@ d3.csv('./assets/visualizados_projects.csv').then((data) => {
         .data(data)
         .join('a')
         .attr('class', classes.project_item)
-        .attr("href", './projects.html')
-        .on('mouseover', function(d) { console.log(d)});
+        .attr('href', d => `.${d.project_path}.html`);
     
     items.selectAll('.project_image')
         .data(d => [d])
