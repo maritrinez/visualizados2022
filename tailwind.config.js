@@ -14,15 +14,18 @@ module.exports = {
       'xs': '320px',
       ...defaultTheme.screens,
     },
+    fontFamily: {
+      sans: ["Ruda", ...defaultTheme.fontFamily.sans],
+      prose: ["Space Grotesk", ...defaultTheme.fontFamily.sans]
+    },
+    colors: {
+      'lime': '#e8e000',
+      'indigo': '#064789',
+      'high': 'rgba(0, 230, 107, 0.7)',
+      'high_blue': 'rgba(70, 221, 222, 0.7)'
+
+    },
     extend: {
-      fontFamily: {
-        sans: ["Ruda", ...defaultTheme.fontFamily.sans],
-        prose: ["Space Grotesk", ...defaultTheme.fontFamily.sans]
-      },
-      colors: {
-        'lime': '#e8e000',
-        'indigo': '#064789'
-      },
       animation: {
         'glow': 'glow 0.3s linear 1'
       },
@@ -38,7 +41,11 @@ module.exports = {
       aspectRatio: {
         'narrowscreen': '8 / 9',
         'widescreen': '21 / 9',
-      }
+      },
+      backgroundImage: (theme) => ({
+        'underline-high': `linear-gradient(0deg, transparent 0%, transparent 15%, ${theme('colors.high')} 15%, ${theme('colors.high')} 70%, transparent 70%)`,
+        
+      })
     }
   },
   plugins: [],

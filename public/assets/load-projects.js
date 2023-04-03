@@ -10,13 +10,12 @@ const classes = {
 }
 
 d3.csv('https://docs.google.com/spreadsheets/d/e/2PACX-1vQoVPZ9h7hN0Ckh41FKH2k42RaS-NGcJzHSVB_kl6GhF-AiaGHmm3JMwNfViiTDS0xeiIV-H0zxNGsd/pub?output=csv').then((data) => {
-    console.log(data)
 
     // sort the data by order
     data.sort((a, b) => b.order - a.order)
 
     // append a div for each project
-    let items = d3.select('#work').select('.layout2').selectAll('a.projects_item')
+    let items = d3.select('#work').select('.layout').selectAll('a.projects_item')
         .data(data)
         .join('a')
         .attr('class', classes.project_item)
@@ -62,4 +61,4 @@ d3.csv('https://docs.google.com/spreadsheets/d/e/2PACX-1vQoVPZ9h7hN0Ckh41FKH2k42
     .join('h4')
     .html(d => d.strength)
 
-})
+});
