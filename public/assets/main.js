@@ -5,7 +5,16 @@ window.addEventListener('DOMContentLoaded', (event) => {
   ////////////////////////
  
   // - - -  E V E N T S  - - -
-  load_projects();
+  const csv_file = './assets/visualizados_projects.csv',
+        csv_url = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQoVPZ9h7hN0Ckh41FKH2k42RaS-NGcJzHSVB_kl6GhF-AiaGHmm3JMwNfViiTDS0xeiIV-H0zxNGsd/pub?output=csv';
+
+  d3.csv(csv_file).then((data) => {
+    // si esta en la home 
+    loadProjects(data);
+    // else
+    updateNavigator(data);
+  });
+  
 
 
   // - - -  H I D D E N   E L E M E N T S   - - -
@@ -14,13 +23,17 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
 
   // - - -  E V E N T S  - - -
-  // apply interaction
-  document.getElementById("home-whoami").addEventListener("click", () => { toggle('whoami')}, false);
-  document.getElementById("nav-whoami").addEventListener("click", () => { toggle('whoami')}, false);
-  document.getElementById("close-whoami").addEventListener("click", () => { toggle('whoami')}, false);
+  
+  // - - WHOAMI/NAV INTERACTION - -
+  const whoamis = document.querySelectorAll('.whoami-link');
+  whoamis.forEach(wai => {
+    wai.addEventListener("click", () => { toggle('whoami')}, false);
+  });
 
   document.getElementById("menu-button").addEventListener("click", () => { toggle('menu')}, false);
 
+
+  // - - PROJECT NAVIGATOR - -
 
   // - - RESIZE - -
   // https://www.cluemediator.com/how-to-wait-resize-end-event-and-then-perform-an-action-using-javascript
@@ -68,6 +81,60 @@ window.addEventListener('DOMContentLoaded', (event) => {
   
 });
 
+//////////////////////////////////////////////////
+// - - -  P R O J E C T   N A V I G A T O R  - - -
+//////////////////////////////////////////////////
+function updateNavigator (data) {
+  const path = window.location.pathname.split('/')[2].replace(/\.html/, ''),
+        current = data.filter(d => d.project_path == path)[0],
+        maxIndex = d3.max(data, d => d.index);
+
+  // - - update counter
+  // esto no haría falta, porque como copio pego, lo podría meter a mano cuando lo tenga definitivo
+  nav.getElementsByTagName('h4')[0].innerText =`${current.index}/${maxIndex}`;
+
+  // - - switch depending on project index
+  // disable arrows for the first & last (esto lo podría hacer a mano en el último y primer projecto)
+  // get prev/next path
+  // update prev/next href
+
+  const nav = document.getElementById('projects-navigator'),
+        prev = nav.getElementsByClassName('prev')[0],
+        next = nav.getElementsByClassName('next')[0];
+  
+  let prev_path, next_path;
+
+  switch (current.index) {
+    case '1':
+      prev.classList.add("pointer-events-none");
+      prev.classList.add("opacity-30");
+      next_path = data.filter(d => d.index == +current.index + 1)[0].project_path;
+      next.href = `./${next_path}.html`;
+      break;
+    case maxIndex:
+      // Toggle menu button
+      next.classList.add("pointer-events-none");
+      next.classList.add("opacity-30");
+      prev_path = data.filter(d => d.index == +current.index - 1)[0].project_path;
+      prev.href = `./${prev_path}.html`;
+      break;
+    default:
+      // activate both
+      prev.classList.remove("pointer-events-none");
+      prev.classList.remove("opacity-30");
+      next.classList.remove("pointer-events-none");
+      next.classList.remove("opacity-30");
+      prev_path = data.filter(d => d.index == +current.index - 1)[0].project_path;
+      next_path = data.filter(d => d.index == +current.index + 1)[0].project_path;
+      next.href = `./${next_path}.html`;
+      prev.href = `./${prev_path}.html`;
+  }
+}
+
+
+
+
+
 
 ////////////////////////////////////////
 // - - -  W H O A M I    M E N U  - - -
@@ -95,6 +162,7 @@ function firstLoad(id) {
 
 // - - PRIVATE FUNCTIONS - -
 function toggle (id) {
+  console.log('entra')
   isOpened[id] ? _hide(id) : _show(id);
   if (id == 'whoami') _hide('menu')
 }
@@ -169,7 +237,7 @@ function _rmAbsPos(id) {
 // - - -  L O A D   H O M E   P R O J E C T S  - - -
 /////////////////////////////////////////////////////
 
-function load_projects () {
+function loadProjects (data) {
   const strength_icon = '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-lime"><path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456zM16.894 20.567L16.5 21.75l-.394-1.183a2.25 2.25 0 00-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 001.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 001.423 1.423l1.183.394-1.183.394a2.25 2.25 0 00-1.423 1.423z"/></svg>';
 
   const classes = {
@@ -181,61 +249,55 @@ function load_projects () {
       strength: 'flex space-x-1'
   }
 
-  const csv_file = './assets/visualizados_projects.csv',
-        csv_url = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQoVPZ9h7hN0Ckh41FKH2k42RaS-NGcJzHSVB_kl6GhF-AiaGHmm3JMwNfViiTDS0xeiIV-H0zxNGsd/pub?output=csv';
+  // sort the data by order
+  data.sort((a, b) => a.index - b.index)
 
-  d3.csv(csv_file).then((data) => {
-    // sort the data by order
-    data.sort((a, b) => b.order - a.order)
-
-    // append a div for each project
-    let items = d3.select('#work').select('.layout').selectAll('a.projects_item')
-        .data(data)
-        .join('a')
-        .attr('class', classes.project_item)
-        .attr('href', d => `.${d.project_path}.html`);
-    
-    items.selectAll('.project_image')
-        .data(d => [d])
-        .join('div')
-        .attr('class', classes.project_image)
-    .selectAll('img')
-        .data(d => [d])
-        .join('img')
-        .attr('class', classes.image)
-        .attr('src', d => `./assets/images/scs/${d.img_path}`);
-    
-    let overlay = items.selectAll('.overlay')
-        .data(d => [d])
-        .join('div')
-        .attr('class', classes.overlay)
-        .selectAll('div')
-        .data(d => [d])
-        .join('div')
-        .attr('class', classes.overlay_copy);
-    overlay.selectAll('h2')
-        .data(d => [d])
-        .join('h2')
-        .attr('class', 'uppercase')
-        .html(d => d.title)
-    
-    overlay.selectAll('h3')
-        .data(d => [d])
-        .join('h3')
-        .html(d => d.client)
-    
-    let strength = overlay.selectAll('div')
-        .data(d => [d])
-        .join('div')
-        .attr('class', classes.strength)
-        .html(strength_icon)
-    
-    strength.selectAll('h3')
+  // append a div for each project
+  let items = d3.select('#work').select('.layout').selectAll('a.projects_item')
+      .data(data)
+      .join('a')
+      .attr('class', classes.project_item)
+      .attr('href', d => `./${d.project_path}.html`);
+  
+  items.selectAll('.project_image')
+      .data(d => [d])
+      .join('div')
+      .attr('class', classes.project_image)
+  .selectAll('img')
+      .data(d => [d])
+      .join('img')
+      .attr('class', classes.image)
+      .attr('src', d => `./assets/images/scs/${d.img_path}`);
+  
+  let overlay = items.selectAll('.overlay')
+      .data(d => [d])
+      .join('div')
+      .attr('class', classes.overlay)
+      .selectAll('div')
+      .data(d => [d])
+      .join('div')
+      .attr('class', classes.overlay_copy);
+  overlay.selectAll('h2')
+      .data(d => [d])
+      .join('h2')
+      .attr('class', 'uppercase')
+      .html(d => d.title)
+  
+  overlay.selectAll('h3')
+      .data(d => [d])
+      .join('h3')
+      .html(d => d.client)
+  
+  let strength = overlay.selectAll('div')
+      .data(d => [d])
+      .join('div')
+      .attr('class', classes.strength)
+      .html(strength_icon)
+  
+  strength.selectAll('h3')
     .data(d => [d])
     .join('h4')
     .html(d => d.strength)
-
-  });
 }
 
 // - - - COPY MAIL
