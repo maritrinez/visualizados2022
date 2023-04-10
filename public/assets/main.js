@@ -88,44 +88,48 @@ function updateNavigator (data) {
   const path = window.location.pathname.split('/')[2].replace(/\.html/, ''),
         current = data.filter(d => d.project_path == path)[0],
         maxIndex = d3.max(data, d => d.index);
-  const nav = document.getElementById('projects-navigator'),
-        prev = nav.getElementsByClassName('prev')[0],
-        next = nav.getElementsByClassName('next')[0];
-  let prev_path, next_path;
+  const navs = document.querySelectorAll('.projects-navigator');
 
-  // - - update counter
-  // esto no haría falta, porque como copio pego, lo podría meter a mano cuando lo tenga definitivo
-  nav.getElementsByClassName('counter')[0].innerText =`${current.index}/${maxIndex}`;
+  // prara cada nav
+  navs.forEach(nav => {
+    const prev = nav.getElementsByClassName('prev')[0],
+          next = nav.getElementsByClassName('next')[0];
+    let prev_path, next_path;
+    
+    // - - update counter
+    // esto no haría falta, porque como copio pego, lo podría meter a mano cuando lo tenga definitivo
+    nav.getElementsByClassName('counter')[0].innerText =`${current.index}/${maxIndex}`;
 
-  // - - switch depending on project index
-  // disable arrows for the first & last (esto lo podría hacer a mano en el último y primer projecto)
-  // get prev/next path
-  // update prev/next href
-  switch (current.index) {
-    case '1':
-      prev.classList.add("pointer-events-none");
-      prev.classList.add("opacity-30");
-      next_path = data.filter(d => d.index == +current.index + 1)[0].project_path;
-      next.href = `./${next_path}.html`;
-      break;
-    case maxIndex:
-      // Toggle menu button
-      next.classList.add("pointer-events-none");
-      next.classList.add("opacity-30");
-      prev_path = data.filter(d => d.index == +current.index - 1)[0].project_path;
-      prev.href = `./${prev_path}.html`;
-      break;
-    default:
-      // activate both
-      prev.classList.remove("pointer-events-none");
-      prev.classList.remove("opacity-30");
-      next.classList.remove("pointer-events-none");
-      next.classList.remove("opacity-30");
-      prev_path = data.filter(d => d.index == +current.index - 1)[0].project_path;
-      next_path = data.filter(d => d.index == +current.index + 1)[0].project_path;
-      next.href = `./${next_path}.html`;
-      prev.href = `./${prev_path}.html`;
-  }
+    // - - switch depending on project index
+    // disable arrows for the first & last (esto lo podría hacer a mano en el último y primer projecto)
+    // get prev/next path
+    // update prev/next href
+    switch (current.index) {
+      case '1':
+        prev.classList.add("pointer-events-none");
+        prev.classList.add("opacity-0");
+        next_path = data.filter(d => d.index == +current.index + 1)[0].project_path;
+        next.href = `./${next_path}.html`;
+        break;
+      case maxIndex:
+        // Toggle menu button
+        next.classList.add("pointer-events-none");
+        next.classList.add("opacity-0");
+        prev_path = data.filter(d => d.index == +current.index - 1)[0].project_path;
+        prev.href = `./${prev_path}.html`;
+        break;
+      default:
+        // activate both
+        prev.classList.remove("pointer-events-none");
+        prev.classList.remove("opacity-0");
+        next.classList.remove("pointer-events-none");
+        next.classList.remove("opacity-0");
+        prev_path = data.filter(d => d.index == +current.index - 1)[0].project_path;
+        next_path = data.filter(d => d.index == +current.index + 1)[0].project_path;
+        next.href = `./${next_path}.html`;
+        prev.href = `./${prev_path}.html`;
+    }
+  });
 }
 
 

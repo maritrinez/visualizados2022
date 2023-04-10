@@ -44,6 +44,7 @@ module.exports = {
       },
       backgroundImage: (theme) => ({
         'underline-high': `linear-gradient(0deg, transparent 0%, transparent 15%, ${theme('colors.high')} 15%, ${theme('colors.high')} 70%, transparent 70%)`,
+        'underline-link': `linear-gradient(0deg, transparent 0%, transparent 15%, ${theme('colors.lime')} 15%, ${theme('colors.lime')} 70%, transparent 70%)`
         
       })
     }

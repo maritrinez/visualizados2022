@@ -77,7 +77,7 @@
     }
 
     .p-small {
-      @apply font-prose mt-1 font-light text-base lg:text-lg;
+      @apply font-prose font-light text-base lg:text-lg;
     }
 
     .p-xsmall {
