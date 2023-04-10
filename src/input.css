@@ -1,3 +1,4 @@
+/* fonts downloaded throygh https://gwfh.mranftl.com/ */
 /* space-grotesk-300 - latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
@@ -7,6 +8,17 @@
   src: url('fonts/space-grotesk-v15-latin-300.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+ */
        url('fonts/space-grotesk-v15-latin-300.woff') format('woff'); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
+
+/* space-grotesk-500 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 500;
+  src: url('fonts/space-grotesk-v15-latin-500.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+ */
+       url('fonts/space-grotesk-v15-latin-500.woff') format('woff'); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
 /* ruda-regular - latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
@@ -46,6 +58,11 @@
     
     h4,
     .h4 {
+      @apply font-sans text-sm xs:text-base font-bold md:text-xl;
+    }
+
+    h5,
+    .h5 {
       @apply font-sans text-sm xs:text-base font-bold md:text-lg;
     }
     
