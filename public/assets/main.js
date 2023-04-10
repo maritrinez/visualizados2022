@@ -95,7 +95,7 @@ function updateNavigator (data) {
 
   // - - update counter
   // esto no haría falta, porque como copio pego, lo podría meter a mano cuando lo tenga definitivo
-  nav.getElementsByTagName('h4')[0].innerText =`${current.index}/${maxIndex}`;
+  nav.getElementsByClassName('counter')[0].innerText =`${current.index}/${maxIndex}`;
 
   // - - switch depending on project index
   // disable arrows for the first & last (esto lo podría hacer a mano en el último y primer projecto)
