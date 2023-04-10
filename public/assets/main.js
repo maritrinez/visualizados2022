@@ -88,6 +88,10 @@ function updateNavigator (data) {
   const path = window.location.pathname.split('/')[2].replace(/\.html/, ''),
         current = data.filter(d => d.project_path == path)[0],
         maxIndex = d3.max(data, d => d.index);
+  const nav = document.getElementById('projects-navigator'),
+        prev = nav.getElementsByClassName('prev')[0],
+        next = nav.getElementsByClassName('next')[0];
+  let prev_path, next_path;
 
   // - - update counter
   // esto no haría falta, porque como copio pego, lo podría meter a mano cuando lo tenga definitivo
@@ -97,13 +101,6 @@ function updateNavigator (data) {
   // disable arrows for the first & last (esto lo podría hacer a mano en el último y primer projecto)
   // get prev/next path
   // update prev/next href
-
-  const nav = document.getElementById('projects-navigator'),
-        prev = nav.getElementsByClassName('prev')[0],
-        next = nav.getElementsByClassName('next')[0];
-  
-  let prev_path, next_path;
-
   switch (current.index) {
     case '1':
       prev.classList.add("pointer-events-none");

@@ -18,14 +18,14 @@ module.exports = {
       sans: ["Ruda", ...defaultTheme.fontFamily.sans],
       prose: ["Space Grotesk", ...defaultTheme.fontFamily.sans]
     },
-    colors: {
-      'lime': '#e8e000',
-      'indigo': '#064789',
-      'high': 'rgba(0, 230, 107, 0.7)',
-      'high_blue': 'rgba(70, 221, 222, 0.7)'
-
-    },
     extend: {
+      colors: {
+        'lime': '#e8e000',
+        'indigo': '#064789',
+        'high': 'rgba(0, 230, 107, 0.7)',
+        'high_blue': 'rgba(70, 221, 222, 0.7)'
+  
+      },
       animation: {
         'glow': 'glow 0.3s linear 1'
       },
