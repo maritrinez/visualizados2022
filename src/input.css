@@ -43,7 +43,7 @@
 @layer base {
     h1,
     .h1 {
-      @apply font-sans tracking-tight font-black mb-3 text-4xl md:text-5xl lg:text-6xl;
+      @apply font-sans tracking-tight font-black mb-6 text-4xl md:text-5xl lg:text-6xl;
     }
     
     h2,
@@ -74,6 +74,10 @@
 
     .p-large {
       @apply font-prose mt-1 font-light text-base xs:text-xl lg:text-2xl;
+    }
+    
+    .p-xl {
+      @apply font-prose mt-2 font-light text-base xs:text-lg md:text-xl lg:text-2xl;
     }
 
     .p-small {
@@ -161,84 +165,45 @@
     display: none;
 }
 
-
-/* links animation */
-/* #home-whoami {
-  text-transform: uppercase;
-  font-weight: 900;
-  text-decoration: none;
-  color: white;
-  display: inline-block;
-  background-size: 120% 100%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-background-clip: text;
-  -moz-text-fill-color: transparent;
-  -ms-background-clip: text;
-  -ms-text-fill-color: transparent;
-  background-clip: text;
-  text-fill-color: transparent;
-  background-image: linear-gradient(45deg, 
-                    #7794ff, 
-                    #44107A,
-                    #FF1361,
-                    #FFF800);
-  animation: .8s shake infinite alternate;
-} */
-
-
-.underline-link {
-  text-transform: uppercase;
-  overflow: hidden;
-  /* font-weight: 500; */
-  background-image: url(./images/underline.svg);
-  background-position: 100% 110%;
-  background-size: auto 0.35em;
-  background-repeat: repeat-x;
-  animation: gradient 10s linear infinite;
+.animated-underline {
+  border-bottom-width: 0;
+	background-repeat: no-repeat;
+	transition: background-size .5s ease-in-out;
 }
 
-.underline-link:hover {
+.menu {
+  background-image: linear-gradient(transparent, transparent), linear-gradient(#000, #000);
+  background-size: 8% 1px;
+  background-position: -10% 100%;
+}
+
+.mail {
+  background-image: linear-gradient(transparent, transparent), linear-gradient(#e8e000, #e8e000);
+  background-size: 70% 2px;
+  animation: animatedBackground 5s linear infinite;
+}
+
+.link {
+  font-weight: 500;
+  background-image: linear-gradient(transparent, transparent), linear-gradient(#000, #000);
+  background-size: 70% 1px;
+  animation: animatedBackground 3s linear infinite;
+}
+
+.animated-underline:hover {
   animation: none;
-  cursor:pointer
+  cursor:pointer;
+  background-size: 100% 1px;
+  background-position: -10% 100%;
 }
 
-.underline-link-slow {
-
-  overflow: hidden;
-  /* font-weight: 500; */
-  background-image: url(./images/underline.svg);
-  background-position: 100% 110%;
-  background-size: auto 0.35em;
-  background-repeat: repeat-x;
-  animation: gradient 20s linear infinite;
-}
-
-
-
-@keyframes gradient {
-	0% {
-		background-position: 100% 110%;
-	}
-	50% {
-		background-position: 50% 110%;
+@keyframes animatedBackground {
+  0% {
+		/* background-size: 70% 1px; */
+	  background-position: -240% 100%;
 	}
 	100% {
-		background-position: 0% 110%;
+		/* background-size: 70% 1px; */
+		background-position: 350% 100%;
 	}
 }
-
-
-@keyframes shake {
-  0% { transform: skewX(-15deg); }
-  5% { transform: skewX(15deg); }
-  10% { transform: skewX(-15deg); }
-  15% { transform: skewX(15deg); }
-  20% { transform: skewX(0deg); }
-  100% { transform: skewX(0deg); }  
-}
-
-
-
-
-

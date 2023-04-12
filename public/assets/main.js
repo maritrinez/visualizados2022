@@ -1,10 +1,9 @@
 window.addEventListener('DOMContentLoaded', (event) => {
-  
   ////////////////////////
   ///// MAIN ORDERS //////
   ////////////////////////
- 
-  // - - -  E V E N T S  - - -
+  
+  // - - -  P R O J E C T S  - - -
   const csv_file = './assets/visualizados_projects.csv',
         csv_url = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQoVPZ9h7hN0Ckh41FKH2k42RaS-NGcJzHSVB_kl6GhF-AiaGHmm3JMwNfViiTDS0xeiIV-H0zxNGsd/pub?output=csv';
 
@@ -15,6 +14,12 @@ window.addEventListener('DOMContentLoaded', (event) => {
     updateNavigator(data);
   });
   
+  // - - -  S C R O L L   T O   W O R K  - - -
+  if (window.location.hash == '#work') {
+    setTimeout(() => { 
+      document.querySelector('#work').scrollIntoView();  
+    }, 300);
+  } 
 
 
   // - - -  H I D D E N   E L E M E N T S   - - -
@@ -30,7 +35,19 @@ window.addEventListener('DOMContentLoaded', (event) => {
     wai.addEventListener("click", () => { toggle('whoami')}, false);
   });
 
-  document.getElementById("menu-button").addEventListener("click", () => { toggle('menu')}, false);
+  document.querySelector('#menu-button').addEventListener("click", () => { toggle('menu')}, false);
+  
+  // link to work
+  document.querySelectorAll('.work-link').forEach(e => {
+    e.addEventListener("click", () => { 
+      toggle('menu');
+      setTimeout(() => { 
+        document.querySelector('#work').scrollIntoView();  
+      }, 300);
+    }, false);
+  });
+
+
 
 
   // - - PROJECT NAVIGATOR - -
@@ -163,7 +180,6 @@ function firstLoad(id) {
 
 // - - PRIVATE FUNCTIONS - -
 function toggle (id) {
-  console.log('entra')
   isOpened[id] ? _hide(id) : _show(id);
   if (id == 'whoami') _hide('menu')
 }
