@@ -32,8 +32,7 @@
           
           <div class="text fl-text-base space-y-6 md:col-span-2">
             <h1 class="fl-text-6xl">
-              Hi, I'm <span class="bg-lime">Beatriz</span>.
-            </h1>
+              Hi, I'm Beatriz.</h1>
             <p class="p-large pb-8">I am a Data Visualization designer and developer, with a strong background in research.</p>
             <p>After graduating as a Sociologist and a Advertising & PR, I started my professional career as a <span class="bg-underline-high">researcher</span>. I worked simultaneously doing user research for <span class="bg-underline-high">digital products</span> and carrying out <span class="bg-underline-high">social studies</span>. I loved and I still love being a researcher, but what attracted me the most was finding and <span class="bg-underline-high">communicating</span> revealing <span class="bg-underline-high">insights</span> in a clear and engaging way.</p>
             <p>In <span class="bg-underline-high">2012</span> I started teaching myself about the theory and practice of <span class="bg-underline-high">Data Visualization</span>. At this point the code came into my life. I realized then that developing the visualizations was as fun as finding and communicating the research insights. I specially enjoyed working with <span class="bg-underline-high">D3.js</span>, in which I specialized.</p>
@@ -42,14 +41,14 @@
             <p>I <span class="bg-underline-high">love mails</span>, hearing about <span class="bg-underline-high">new projects</span> and <span class="bg-underline-high">challenges</span> so feel free to contact me with any questions, any data project or even just to say hello.</p>
             
             <!-- Mail starts here -->
-            <a class="mailto-link group max-w-fit flex flex-col items-end justify-end" href="mailto:beatriz@visualizados.com" data-mail="beatriz@visualizados.com">
+            <a class="mailto-link animated-underline mail group max-w-fit flex flex-col items-end justify-end" href="mailto:beatriz@visualizados.com" data-mail="beatriz@visualizados.com">
               <!-- Tooltip here -->
               <div id="mailto-message" class="tooltip-top relative mb-2 px-2 py-[0.1rem] text-sm text-black bg-lime opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none">
                 Click to copy email address
               </div>
               
               <!-- Icon/text goes here -->
-              <p class="mt-0 underline-link-slow text-xl xs:text-2xl md:text-3xl pointer-events-none">beatriz@visualizados.com</p>
+              <p class="mt-0 text-xl xs:text-2xl md:text-3xl pointer-events-none">beatriz@visualizados.com</p>
               
             </a>
             <!-- Mail ends here -->
@@ -59,11 +58,11 @@
       </div>
     </section>
 
-    <div id="main" class="test z-10 overflow-y-hidden transition-[max-height] duration-500">
-      <nav id="menu" class="layout w-full absolute top-[-35%] bg-high_blue">
+    <div id="main" class="z-10 overflow-y-hidden transition-[max-height] duration-500">
+      <nav id="menu" class="layout w-full absolute top-[-35%]">
         <ul class="flex flex-col items-center py-4 space-y-4">
-          <li>Work</li>
-          <li class="whoami-link hover:cursor-pointer">Who am I</li>
+          <li class="cursor-pointer animated-underline menu"><a href="./#work">Work</a></li>
+          <li class="whoami-link cursor-pointer animated-underline menu">Who am I</li>
           
             <!-- Get in touch -->
             <li class="flex basis-2/5 justify-end space-x-3 sm:hidden items-center">
@@ -95,12 +94,12 @@
         </ul>
       </nav>
       
-      <header class="bg-white">
+      <header class="bg-white opacity-30 hover:opacity-100">
         <div class="layout h-14 flex items-center justify-between">
           <!-- Logo-->
-          <h4 id="logo" class="basis-2/5">
+          <h5 id="logo" class="basis-2/5">
             <a href="./">visualizados</a>
-          </h4>
+          </h5>
           
           <!-- Menu button-->
           <div id="menu-button" class="basis-1/5 justify-end sm:justify-center flex items-center">
@@ -128,7 +127,7 @@
           <!-- Get in touch -->
           <div class="hidden basis-2/5 justify-end space-x-3 sm:flex items-center">
             <div class="peer group flex items-center space-x-1 pr-2">
-              <h4 class="peer">Get in touch</h4>
+              <h5 class="peer">Get in touch</h5>
               
               <!-- Heroicon name: arrow-small-right -->
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" class="w-5 h-5 group-hover:translate-x-2 transition-transform">
@@ -162,14 +161,14 @@
 
       <!-- # # # HERE THE PROJECT # # #  -->
       <section id="project" class="layout overflow-hidden relative mt-8">
-        <nav id="projects-navigator" data-index = "1" class="absolute top-[5px] right-0 flex items-center md:top-0">
-          <a class="prev">
+        <nav class="projects-navigator absolute top-[5px] right-0 flex items-center md:top-0">
+          <a class="prev hover:animate-glow">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" class="w-4 h-4 md:w-5 md:h-5">
               <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
             </svg>       
           </a>
           <h4 class="counter px-1 mt-[2px]">1/9</h4>
-          <a class="next">
+          <a class="next hover:animate-glow">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" class="w-4 h-4 md:w-5 md:h-5">
               <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
             </svg>   
@@ -178,15 +177,15 @@
 
         <!-- SPECIFIC INFO & PICS  -->
         <div class="shrink-0 w-full">
-          <div class="grid grid-cols-1 gap-y-4   md:grid-cols-7 md:gap-x-4">
+          <div class="grid grid-cols-1 gap-y-4 md:gap-x-8 md:grid-cols-10">
             <!-- title & tags -->
-            <div class="col-span-2 grid gap-y-2 md:gap-y-4">
+            <div class="col-span-3 grid gap-y-2 md:gap-y-4">
                 <h2>Women fertility & Age</h2>
                 <ul class="self-end grid grid-cols-[auto_1fr] gap-x-2 gap-y-1 items-start p-xsmall md:gap-x-4">
                   <li class="font-medium">CLIENT</li>
-                  <li class="">Sanitas</li>
+                  <li><a href="https://www.sanitas.es/" target="_blank" class="underline underline-offset-2 hover:no-underline hover:bg-underline-link">Sanitas</a></li>
                   <li class="font-medium">TOOLS</li>
-                  <li class="">Canvas; D3.js</li>
+                  <li class="">Research; R; Canvas; D3.js</li>
   
                   <li class="col-span-2 self-end mt-6 p-small font-medium">
                     <a href="https://sanitasdatasalud.es/conoce-la-tecnica-reproduccion-asistida-mas-adecuada-ti-este-recomendador/" target="_blank" class="inline-flex items-center group hover:text-lime">
@@ -199,14 +198,15 @@
               </ul>
             </div>
             <!-- description -->
-            <div class="col-span-3 p-small">
-              El cliente llegó a mi con la idea abierta de hacer algo acerca de la fertilidad. Tenia algunos datos registrados de las estadísticas de sus clínicas, pero no estaban completos para contar una historia.
-              Hice some desk research buscando en papers yen fuentes oficiales números y estadísticas que avalaran lo que ya intuíamos que nos ayudara a entender el fenómeno de la fertilidad de manera global, teniendo en cuenta por supuesto que el cuerpo de cada mujer es único y funciona de una manera única.
-              
+            <div class="col-span-5">
+              <p class="p-small mt-0"><span class="font-medium">Sanitas</span>, a leading international health company, wanted to publish an article about female fertility on their data blog. Although the company had some registered data, it wasn't sufficient to tell a story.</p>
+              <p class="p-small mt-2">Since there wasn't data enough, I conducted an <span class="font-medium">extensive desk research</span>, digging through scientific papers and official data sources. By gathering all the information I got the knowledge to explain the phenomenon of female fertility on a global scale (while recognizing that every woman's body is unique, of course).</p>
+              <p class="p-small mt-2">Once I had all the details, I designed and developed a compelling <span class="font-medium">storytelling</span> and an <span class="font-medium">interactive recommender</span> that visually illustrates how female fertility varies over time, providing users with a clear and concise explanation of the phenomenon.</p>
             </div>
           </div>
+          
           <!-- PICS! -->
-          <div class="grid grid-cols-1 gap-1 mt-12 p-1 w-full md:aspect-[1/0.67] md:grid-cols-3 md:grid-rows-2 md:mt-28 bg-black">
+          <div class="grid grid-cols-1 gap-1 mt-12 p-1 w-full bg-black md:aspect-[1/0.67] md:grid-cols-3 md:grid-rows-2 md:mt-28">
             <picture class="overflow-hidden md:col-span-2 md:row-span-1">
               <img class="w-full" src="./assets/images/scs/fertility_egg.gif" alt="Conversations home screen" loading="lazy">
             </picture>
@@ -218,22 +218,27 @@
               <img class="w-full" src="./assets/images/scs/fertility_predict.gif" alt="Conversations home screen" loading="lazy">
             </picture>
           </div>
-          <div class="w-full text-right mt-10">
-            <a href="https://sanitasdatasalud.es/conoce-la-tecnica-reproduccion-asistida-mas-adecuada-ti-este-recomendador/" target="_blank" class="inline-flex items-center group hover:text-lime">
-              <span>View website</span>
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="ml-1 w-5 h-5 group-hover:animate-glow">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
-              </svg>
-            </a>
+          <!-- END PICS! -->
+
+          <div class="w-full flex justify-end mt-10">
+            <nav class="projects-navigator flex items-center">
+              <a class="prev hover:animate-glow">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" class="w-4 h-4 md:w-5 md:h-5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+                </svg>       
+              </a>
+              <h4 class="counter px-1 mt-[2px]">1/9</h4>
+              <a class="next hover:animate-glow">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" class="w-4 h-4 md:w-5 md:h-5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                </svg>   
+              </a>
+            </nav>
           </div>
         </div>
       
       </section>
       
-
-      <section id="projects" class="">
-        
-      </section>
     </div>
 
 
