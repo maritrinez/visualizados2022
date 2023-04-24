@@ -180,43 +180,59 @@
           <div class="grid grid-cols-1 gap-y-4 md:gap-x-8 md:grid-cols-10">
             <!-- title & tags -->
             <div class="col-span-3 grid gap-y-2 md:gap-y-4">
-                <h2>ODS Performance</h2>
+                <h2>Cultural Grants Archive</h2>
                 <ul class="self-end grid grid-cols-[auto_1fr] gap-x-2 gap-y-1 items-start p-xsmall md:gap-x-4">
                   <li class="font-medium">CLIENT</li>
-                  <li><a href="https://www.smartandcity.com/" target="_blank" class="underline underline-offset-2 hover:no-underline hover:bg-underline-link">Smart & City</a></li>
+                  <li><a href="http://www.residencia.csic.es/" target="_blank" class="underline underline-offset-2 hover:no-underline hover:bg-underline-link">Residencia de Estudiantes</a></li>
+                  <li class="font-medium">PARTNERS</li>
+                  <li>
+                    <ul class="inline">
+                      <li><a href="https://populate.tools/" target="_blank" class="underline underline-offset-2 hover:no-underline hover:bg-underline-link">Populate</a></li>
+                    </ul>
+                  </li>
                   <li class="font-medium">TOOLS</li>
                   <li class="">R; D3.js</li>
+  
+                  <li class="col-span-2 self-end mt-6 p-small font-medium">
+                    <a href="http://archivojae2.edaddeplata.org/" target="_blank" class="inline-flex items-center group hover:text-lime">
+                      <span>View website</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="ml-1 w-5 h-5 group-hover:animate-glow">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
+                      </svg>
+                    </a>
+                  </li>
               </ul>
             </div>
             <!-- description -->
             <div class="col-span-5">
-              <p class="p-small mt-0">At Smart & City, they are <span class="font-medium">experts in measuring the impact of public policies on the SDGs</span>. They needed a visual way to present their results, both for their direct clients and for them to communicate their results to the general public.</p>
-              <p class="p-small mt-2">I crafted a <span class="font-medium">completely customized data visualization</span> that includes an initial view with a set of <span class="font-medium">circular trees</span> representing the latest available year's data. For showing the evolution of indicators over time, I developed <span class="font-medium">collapsible small multiples</span> so the users can explore more than 100 indicators little by little, in an organized and intuitive manner. Both views' design was determined by the hierarchical nature of the data.</p>
+              <p class="p-small mt-0">The ‘Student Residence’ was the <span class="font-medium">centre of Spanish cultural life during the early decades of the 20th century</span>. One of its programs was to support its residents' careers by helping them to expand their studies. Through the 'Board for Advanced Studies and Scientific Research,' they approved <span class="font-medium">over 10,000 grants for studying abroad</span>.</p>
+              <p class="p-small mt-2">Of course, a detailed record of every person or organization involved in the project was carefully stored in the program's archive. The files were digitized several years ago. They also developed an exploration tool that urgently required a technical update.</p>
+              <p class="p-small mt-2">The client came to me, asking for a <span class="font-medium">complete reconstruction</span>: not only the technology should be renovated, but also the design, the information displayed and the way of exploring it.</p>
+              <p class="p-small mt-2">I designed a data visualization with a clean and appealing layout, where the navigation meets the standards. The list view allows to dig deeply in each record, which contains <span class="font-medium">information about the students' travels, works, articles and papers</span>. <a href="http://archivojae2.edaddeplata.org/ficha/personas/20/trabajos/21" target="_blank" class="underline underline-offset-2 hover:no-underline hover:bg-underline-link">You can even read them!</a></p>
             </div>
           </div>
           
           <!-- PICS! -->
-          <div class="grid grid-cols-1 gap-1 mt-12 p-1 w-full bg-black md:aspect-[1/0.69] md:grid-cols-6 md:grid-rows-3 md:mt-28">
+          <div class="grid grid-cols-1 gap-1 mt-12 p-1 w-full bg-black md:aspect-[1/0.92] md:grid-cols-6 md:grid-rows-4 md:mt-28">
             <picture class="overflow-hidden md:col-span-4 md:row-span-2">
-              <img class="w-full" src="./assets/images/scs/ods_home.png" loading="lazy">
+              <img class="w-full" src="./assets/images/scs/jae_home.png" loading="lazy">
             </picture>
-            
-            <picture class="overflow-hidden md:col-span-2 md:row-span-3">
-              <img class="w-full" src="./assets/images/scs/ods_sm.png" loading="lazy">
-            </picture>
-      
-            <!-- el video tiene que ir en un div para que haga el cropped -->
-            <div class="overflow-hidden md:col-span-2">
-              <video class="w-full" autoplay loop playsinline muted>
-                <source src="./assets/images/scs/ods_home_moving.mov" type="video/mp4">
-              </video>
-            </div>
 
-            <div class="overflow-hidden md:col-span-2">
-              <video class="w-full" autoplay loop playsinline muted>
-                <source src="./assets/images/scs/ods_sm_moving.mov" type="video/mp4">
-              </video>
-            </div>                
+            <picture class="overflow-hidden md:col-span-2 md:row-span-4">
+              <img class="w-full" src="./assets/images/scs/jae_data.png" loading="lazy">
+            </picture>
+
+            <picture class="overflow-hidden md:col-span-2 md:row-span-1">
+              <img class="w-full" src="./assets/images/scs/jae_moving.gif" loading="lazy">
+            </picture>
+
+            <picture class="overflow-hidden md:col-span-2 md:row-span-1">
+              <img class="w-full" src="./assets/images/scs/jae_p_list.png" loading="lazy">
+            </picture>
+
+            <picture class="overflow-hidden md:col-span-4 md:row-span-1">
+              <img class="w-full" src="./assets/images/scs/jae_list.png" loading="lazy">
+            </picture>
           </div>
           <!-- END PICS! -->
 

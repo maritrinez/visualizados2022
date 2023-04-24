@@ -1,0 +1,8 @@
+<html>
+<body>
+
+<p>At the Residencia de Estudiantes, the famous Spanish cultural institution, an amazing project was undertaken to digitize and classify all the magazines&rsquo; articles published during the Spanish &ldquo;Silver Age&rdquo;. The result was an <strong>awesome database of texts from Spain&apos;s brightest thinkers, writers, and artists</strong>, such as the philosopher Mar&iacute;a Zambrano, the painter who pioneered surrealism in Spain Maruja Mallo, and the Nobel Prize winner Gabriela Mistral.</p>
+<p>The client reached out to me to <strong>update an old-fashioned tool</strong> used to explore this database, which includes +9,500 articles, the original magazines they were published in, information about the authors, the cultural movements they belong to, and the works mentioned in the texts.</p>
+<p>Apart from the pleasure of working with such high-quality articles, the project had a <strong>technically challenging aspect</strong>: pre-processing the position of +20,000 nodes to reduce load time and make the tool responsive, using canvas to capture user interaction, and developing a circular scroll in the individual view so that nothing is missed.</p>
+<p>Explore the database to discover which people wrote for the magazines and dive into some of the most interesting articles ever written (mostly in Spanish, as was the Spanish Silver Age).</p></body>
+</html>
