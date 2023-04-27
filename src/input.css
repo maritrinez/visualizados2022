@@ -92,10 +92,16 @@
 @tailwind utilities;
 
 .layout {
-    /* max-width: 68.75rem; */
-    width: 92%;
-    margin-left: auto;
-    margin-right: auto;
+
+  width: 92%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.layout-narrow {
+  width: 86%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .tooltip-top::after {
@@ -210,4 +216,35 @@
 
 .writing-vertical-lr {
   writing-mode: vertical-lr;
+}
+
+
+/* CARDS TRANSITION */
+/* https://webdesign.tutsplus.com/tutorials/animate-on-scroll-with-javascript--cms-36671 */
+/* https://alvarotrigo.com/blog/css-animations-scroll/ */
+
+.card {
+  transition: transform 1s;
+  opacity: 0;
+}
+
+.fade-up {
+  transform: translateY(100px);
+}
+
+.fade-down {
+  transform: translateY(-100px);
+}
+
+.card.active {
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion) {
+  .card {
+    opacity: 1;
+    transform: translateY(0px);
+    transition: none !important;
+  }
 }
