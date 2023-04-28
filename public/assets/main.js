@@ -2,6 +2,30 @@ import {csv} from "https://cdn.skypack.dev/d3-fetch@3";
 import {selectAll, select} from "https://cdn.skypack.dev/d3-selection@3";
 import {sort, max, filter} from "https://cdn.jsdelivr.net/npm/d3-array@3/+esm";
 
+
+// - - GRID ANIMATION - -
+function revealWork() {
+  if (isOpened.whoami) return;
+  const cards = document.querySelectorAll(".card"); 
+  for (let i = 0; i < cards.length; i++) {
+    const windowHeight = window.innerHeight;
+    const elementTop = cards[i].getBoundingClientRect().top,
+          elementBottom = cards[i].getBoundingClientRect().bottom;
+    const offset = windowHeight * 0; 
+    if (elementTop < windowHeight - offset & elementBottom > 0) { // reveals
+      cards[i].classList.add("active");
+    } else if (elementBottom < 0) { // hides upwards
+      cards[i].classList.remove("active");
+      cards[i].classList.remove("fade-up");
+      cards[i].classList.add("fade-down");
+    } else { // hide downwards
+      cards[i].classList.remove("active");
+      cards[i].classList.remove("fade-down");
+      cards[i].classList.add("fade-up");
+    }
+  }
+}
+
 window.addEventListener('DOMContentLoaded', (event) => {
   ///////////////////////////
   ///// ON LOAD ORDERS //////
@@ -26,8 +50,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
   } 
 
   // - - -  R E V E A L   W O R K  - - -
-  // Reveal visibles on load
-  revealWork();
+  
   // reveal nexts on scrolling
   window.addEventListener("scroll", revealWork);
 
@@ -79,28 +102,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     }, 500);
   });
 
-  // - - GRID ANIMATION - -
-  function revealWork() {
-    if (isOpened.whoami) return;
-    const cards = document.querySelectorAll(".card"); 
-    for (let i = 0; i < cards.length; i++) {
-      const windowHeight = window.innerHeight;
-      const elementTop = cards[i].getBoundingClientRect().top,
-            elementBottom = cards[i].getBoundingClientRect().bottom;
-      const offset = windowHeight * 0; 
-      if (elementTop < windowHeight - offset & elementBottom > 0) { // reveals
-        cards[i].classList.add("active");
-      } else if (elementBottom < 0) { // hides upwards
-        cards[i].classList.remove("active");
-        cards[i].classList.remove("fade-up");
-        cards[i].classList.add("fade-down");
-      } else { // hide downwards
-        cards[i].classList.remove("active");
-        cards[i].classList.remove("fade-down");
-        cards[i].classList.add("fade-up");
-      }
-    }
-  }
+
   
 
   // - - MAILTO - -
@@ -283,7 +285,7 @@ function _rmAbsPos(id) {
 /////////////////////////////////////////////////////
 
 function loadProjects (data) {
-  const strength_icon = '<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-lime"><path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456zM16.894 20.567L16.5 21.75l-.394-1.183a2.25 2.25 0 00-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 001.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 001.423 1.423l1.183.394-1.183.394a2.25 2.25 0 00-1.423 1.423z"></path></svg>';
+  const strength_icon = '<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 sm:w-6 sm:h-6 text-lime"><path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456zM16.894 20.567L16.5 21.75l-.394-1.183a2.25 2.25 0 00-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 001.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 001.423 1.423l1.183.394-1.183.394a2.25 2.25 0 00-1.423 1.423z"></path></svg>';
 
   const classes = {
       card_odd: 'card fade-up group',
@@ -292,11 +294,11 @@ function loadProjects (data) {
       image: 'h-full w-full object-cover object-center group-hover:scale-[1.03] transition-all duration-300',
       caption: 'caption text-right',
       caption_title: 'title flex space-x-2 justify-end items-center mt-2',
-      caption_title_line: 'w-1/4 border-b border-black transition-all duration-700 group-hover:w-full',
+      caption_title_line: 'w-full sm:w-1/4 border-b border-black transition-all duration-700 group-hover:w-full',
       caption_title_text: 'font-sans font-medium whitespace-nowrap',
-      caption_subtitle: 'subtitle h-8 overflow-hidden transition-all',
-      caption_subtitle_strength: 'strength flex space-x-2 justify-end items-end transition-all duration-300 mt-[-2.2rem] group-hover:mt-[-0.2rem]',
-      caption_subtitle_client: 'client p-small before:inline-block before:border-l-[1px] before:border-black before:h-1/4  before:m-3'
+      caption_subtitle: 'subtitle overflow-hidden transition-all sm:h-8',
+      caption_subtitle_strength: 'strength flex space-x-1 sm:space-x-2 justify-end items-end transition-all duration-300 -mt-1 sm:-mt-8 group-hover:-mt-0.5',
+      caption_subtitle_client: 'client p-small mt-1 hidden sm:block'
   }
 
   // sort the data by order
@@ -346,13 +348,15 @@ function loadProjects (data) {
     .data(d => [d])
     .join('div')
     .attr('class', classes.caption_subtitle_strength)
-    .html(d => `${strength_icon}<p class="p-small font-medium">${d.strength}</p>`);
+    .html(d => `${strength_icon}<p class="p-small sm:font-medium">${d.strength}</p>`);
   
   subtitle.selectAll('.client')
     .data(d => [d])
     .join('div')
     .attr('class', classes.caption_subtitle_client)
     .html(d => d.client);
+  
+  revealWork();
 }
 
 // - - - COPY MAIL
