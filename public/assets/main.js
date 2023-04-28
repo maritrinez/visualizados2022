@@ -1,3 +1,7 @@
+import {csv} from "https://cdn.skypack.dev/d3-fetch@3";
+import {selectAll, select} from "https://cdn.skypack.dev/d3-selection@3";
+import {sort, max, filter} from "https://cdn.jsdelivr.net/npm/d3-array@3/+esm";
+
 window.addEventListener('DOMContentLoaded', (event) => {
   ///////////////////////////
   ///// ON LOAD ORDERS //////
@@ -7,7 +11,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
   const csv_file = './assets/visualizados_projects.csv',
         csv_url = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQoVPZ9h7hN0Ckh41FKH2k42RaS-NGcJzHSVB_kl6GhF-AiaGHmm3JMwNfViiTDS0xeiIV-H0zxNGsd/pub?output=csv';
 
-  d3.csv(csv_url).then((data) => {
+  csv(csv_url).then((data) => {
     // si esta en la home 
     loadProjects(data);
     // else
@@ -83,7 +87,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
       const windowHeight = window.innerHeight;
       const elementTop = cards[i].getBoundingClientRect().top,
             elementBottom = cards[i].getBoundingClientRect().bottom;
-      const offset = windowHeight * 0.08; 
+      const offset = windowHeight * 0; 
       if (elementTop < windowHeight - offset & elementBottom > 0) { // reveals
         cards[i].classList.add("active");
       } else if (elementBottom < 0) { // hides upwards
@@ -128,7 +132,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 function updateNavigator (data) {
   const path = window.location.pathname.split('/')[2].replace(/\.html/, ''),
         current = data.filter(d => d.project_path == path)[0],
-        maxIndex = d3.max(data, d => d.index);
+        maxIndex = max(data, d => d.index);
   const navs = document.querySelectorAll('.projects-navigator');
 
   // prara cada nav
@@ -299,7 +303,7 @@ function loadProjects (data) {
   data.sort((a, b) => a.index - b.index)
 
   // append a div for each project
-  let items = d3.select('#work').select('ul').selectAll('li.card')
+  let items = select('#work').select('ul').selectAll('li.card')
       .data(data)
       .join('li')
       .attr('class', (d,i) => (i%2 == 0) ? classes.card_odd : classes.card_even);
@@ -311,7 +315,7 @@ function loadProjects (data) {
     .selectAll('a')
       .data(d => [d])
       .join('a')
-      .attr('src', d => `./assets/images/scs/${d.project_path}`)
+      .attr('href', d => `./${d.project_path}.html`)
     .selectAll('img')
       .data(d => [d])
       .join('img')
