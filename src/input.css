@@ -77,7 +77,7 @@
     }
     
     .p-xl {
-      @apply font-prose mt-2 font-light text-base xs:text-lg md:text-xl lg:text-2xl;
+      @apply font-prose mt-2 font-light text-base sm:text-lg lg:text-xl xl:text-2xl;
     }
 
     .p-small {
@@ -94,12 +94,6 @@
 .layout {
 
   width: 92%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.layout-narrow {
-  width: 86%;
   margin-left: auto;
   margin-right: auto;
 }
