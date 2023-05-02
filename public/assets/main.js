@@ -35,7 +35,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
   const csv_file = './assets/visualizados_projects.csv',
         csv_url = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQoVPZ9h7hN0Ckh41FKH2k42RaS-NGcJzHSVB_kl6GhF-AiaGHmm3JMwNfViiTDS0xeiIV-H0zxNGsd/pub?output=csv';
 
-  csv(csv_url).then((data) => {
+  csv(csv_file).then((data) => {
     // si esta en la home 
     loadProjects(data);
     // else
@@ -143,9 +143,9 @@ function updateNavigator (data) {
           next = nav.getElementsByClassName('next')[0];
     let prev_path, next_path;
     
-    // - - update counter
-    // esto no haría falta, porque como copio pego, lo podría meter a mano cuando lo tenga definitivo
-    nav.getElementsByClassName('counter')[0].innerText =`${current.index}/${maxIndex}`;
+    // // - - update counter
+    // // esto no haría falta, porque como copio pego, lo podría meter a mano cuando lo tenga definitivo
+    // nav.getElementsByClassName('counter')[0].innerText =`${current.index}/${maxIndex}`;
 
     // - - switch depending on project index
     // disable arrows for the first & last (esto lo podría hacer a mano en el último y primer projecto)
@@ -289,16 +289,16 @@ function loadProjects (data) {
 
   const classes = {
       card_odd: 'card fade-up group',
-      card_even: 'card fade-up group sm:delay-300',
+      card_even: 'card fade-up group md:delay-300',
       card_image: 'figure h-min overflow-hidden',
       image: 'h-full w-full object-cover object-center group-hover:scale-[1.03] transition-all duration-300',
       caption: 'caption text-right',
       caption_title: 'title flex space-x-2 justify-end items-center mt-2',
-      caption_title_line: 'w-full sm:w-1/4 border-b border-black transition-all duration-700 group-hover:w-full',
+      caption_title_line: 'w-full md:w-1/4 border-b border-black transition-all duration-700 group-hover:w-full',
       caption_title_text: 'font-sans font-medium whitespace-nowrap',
-      caption_subtitle: 'subtitle overflow-hidden transition-all sm:h-8',
-      caption_subtitle_strength: 'strength flex space-x-1 sm:space-x-2 justify-end items-end transition-all duration-300 -mt-1 sm:-mt-8 group-hover:-mt-0.5',
-      caption_subtitle_client: 'client p-small mt-1 hidden sm:block'
+      caption_subtitle: 'subtitle overflow-hidden transition-all md:h-8',
+      caption_subtitle_strength: 'strength flex space-x-1 md:space-x-2 justify-end items-end transition-all duration-300 -mt-1 md:-mt-8 group-hover:-mt-0.5',
+      caption_subtitle_client: 'client p-small mt-1 hidden md:block'
   }
 
   // sort the data by order

@@ -159,120 +159,113 @@
         </div>
       </header>
 
+
       <!-- # # # HERE THE PROJECT # # #  -->
-      <section id="project" class="layout overflow-hidden relative mt-8">
-        <nav class="projects-navigator absolute top-[5px] right-0 flex items-center md:top-0">
-          <a class="prev hover:animate-glow">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" class="w-4 h-4 md:w-5 md:h-5">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
-            </svg>       
-          </a>
-          <h4 class="counter px-1 mt-[2px]">1/9</h4>
-          <a class="next hover:animate-glow">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" class="w-4 h-4 md:w-5 md:h-5">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-            </svg>   
-          </a>
-        </nav>
+      <section id="project" class="layout mt-8">
+        <!-- SPECIFIC INFO  -->
+        <div class="info grid grid-cols-5 gap-y-4 md:gap-x-8 md:grid-cols-10">
+          <!-- title & tags -->
+          <div class="order-1 grid gap-y-2 col-span-4 md:col-span-3 md:gap-y-4">
+            <h2 class="mr-4">Cultural Grants Archive</h2>
+            <ul class="self-end grid grid-cols-[auto_1fr] gap-x-2 gap-y-1 items-start p-xsmall md:gap-x-4">
+              <li class="font-medium">CLIENT</li>
+              <li><a href="http://www.residencia.csic.es/" target="_blank" class="underline underline-offset-2 hover:no-underline hover:bg-underline-link">Residencia de Estudiantes</a></li>
+              <li class="font-medium">PARTNERS</li>
+              <li>
+                <ul class="inline">
+                  <li><a href="https://populate.tools/" target="_blank" class="underline underline-offset-2 hover:no-underline hover:bg-underline-link">Populate</a></li>
+                </ul>
+              </li>
+              <li class="font-medium">TOOLS</li>
+              <li class="">R; D3.js</li>
 
-        <!-- SPECIFIC INFO & PICS  -->
-        <div class="shrink-0 w-full">
-          <div class="grid grid-cols-1 gap-y-4 md:gap-x-8 md:grid-cols-10">
-            <!-- title & tags -->
-            <div class="col-span-3 grid gap-y-2 md:gap-y-4">
-                <h2>Cultural Grants Archive</h2>
-                <ul class="self-end grid grid-cols-[auto_1fr] gap-x-2 gap-y-1 items-start p-xsmall md:gap-x-4">
-                  <li class="font-medium">CLIENT</li>
-                  <li><a href="http://www.residencia.csic.es/" target="_blank" class="underline underline-offset-2 hover:no-underline hover:bg-underline-link">Residencia de Estudiantes</a></li>
-                  <li class="font-medium">PARTNERS</li>
-                  <li>
-                    <ul class="inline">
-                      <li><a href="https://populate.tools/" target="_blank" class="underline underline-offset-2 hover:no-underline hover:bg-underline-link">Populate</a></li>
-                    </ul>
-                  </li>
-                  <li class="font-medium">TOOLS</li>
-                  <li class="">R; D3.js</li>
-  
-                  <li class="col-span-2 self-end mt-6 p-small font-medium">
-                    <a href="http://archivojae2.edaddeplata.org/" target="_blank" class="inline-flex items-center group hover:text-lime">
-                      <span>View website</span>
-                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="ml-1 w-5 h-5 group-hover:animate-glow">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
-                      </svg>
-                    </a>
-                  </li>
-              </ul>
-            </div>
-            <!-- description -->
-            <div class="col-span-5">
-              <p class="p-small mt-0">The ‘Student Residence’ was the <span class="font-medium">centre of Spanish cultural life during the early decades of the 20th century</span>. One of its programs was to support its residents' careers by helping them to expand their studies. Through the 'Board for Advanced Studies and Scientific Research,' they approved <span class="font-medium">over 10,000 grants for studying abroad</span>.</p>
-              <p class="p-small mt-2">Of course, a detailed record of every person or organization involved in the project was carefully stored in the program's archive. The files were digitized several years ago. They also developed an exploration tool that urgently required a technical update.</p>
-              <p class="p-small mt-2">The client came to me, asking for a <span class="font-medium">complete reconstruction</span>: not only the technology should be renovated, but also the design, the information displayed and the way of exploring it.</p>
-              <p class="p-small mt-2">I designed a data visualization with a clean and appealing layout, where the navigation meets the standards. The list view allows to dig deeply in each record, which contains <span class="font-medium">information about the students' travels, works, articles and papers</span>. <a href="http://archivojae2.edaddeplata.org/ficha/personas/20/trabajos/21" target="_blank" class="underline underline-offset-2 hover:no-underline hover:bg-underline-link">You can even read them!</a></p>
-            </div>
+              <li class="col-span-2 self-end mt-6 p-small font-medium">
+                <a href="http://archivojae2.edaddeplata.org/" target="_blank" class="inline-flex items-center group hover:text-lime">
+                  <span>View website</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="ml-1 w-5 h-5 group-hover:animate-glow">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
+                  </svg>
+                </a>
+              </li>
+            </ul>
           </div>
-          
-          <!-- PICS! -->
-          <div class="grid grid-cols-1 gap-1 mt-12 p-1 w-full bg-black md:aspect-[1/0.92] md:grid-cols-6 md:grid-rows-4 md:mt-28">
-            <picture class="overflow-hidden md:col-span-4 md:row-span-2">
-              <img class="w-full" src="./assets/images/scs/jae_home.png" loading="lazy">
-            </picture>
-
-            <picture class="overflow-hidden md:col-span-2 md:row-span-4">
-              <img class="w-full" src="./assets/images/scs/jae_data.png" loading="lazy">
-            </picture>
-
-            <picture class="overflow-hidden md:col-span-2 md:row-span-1">
-              <img class="w-full" src="./assets/images/scs/jae_moving.gif" loading="lazy">
-            </picture>
-
-            <picture class="overflow-hidden md:col-span-2 md:row-span-1">
-              <img class="w-full" src="./assets/images/scs/jae_p_list.png" loading="lazy">
-            </picture>
-
-            <picture class="overflow-hidden md:col-span-4 md:row-span-1">
-              <img class="w-full" src="./assets/images/scs/jae_list.png" loading="lazy">
-            </picture>
-          </div>
-          <!-- END PICS! -->
-
-          <div class="w-full flex justify-end mt-10">
-            <nav class="projects-navigator flex items-center">
-              <a class="prev hover:animate-glow">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" class="w-4 h-4 md:w-5 md:h-5">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
-                </svg>       
-              </a>
-              <h4 class="counter px-1 mt-[2px]">1/9</h4>
-              <a class="next hover:animate-glow">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" class="w-4 h-4 md:w-5 md:h-5">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-                </svg>   
-              </a>
-            </nav>
+          <!-- nav -->
+          <nav class="projects-navigator order-2 self-start justify-self-end flex items-center mt-[2px] md:order-3 md:col-start-10">
+            <a class="prev hover:animate-glow">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" class="w-4 h-4 md:w-5 md:h-5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+              </svg>       
+            </a>
+            <h4 class="counter px-1 mt-[2px]">4/9</h4>
+            <a class="next hover:animate-glow">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" class="w-4 h-4 md:w-5 md:h-5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+              </svg>   
+            </a>
+          </nav>
+          <!-- description -->
+          <div class="col-span-5 order-3 md:order-2">
+            <p class="p-small mt-0">The ‘Student Residence’ was the <span class="font-medium">centre of Spanish cultural life during the early decades of the 20th century</span>. One of its programs was to support its residents' careers by helping them to expand their studies. Through the 'Board for Advanced Studies and Scientific Research,' they approved <span class="font-medium">over 10,000 grants for studying abroad</span>.</p>
+            <p class="p-small mt-2">Of course, a detailed record of every person or organization involved in the project was carefully stored in the program's archive. The files were digitized several years ago. They also developed an exploration tool that urgently required a technical update.</p>
+            <p class="p-small mt-2">The client came to me, asking for a <span class="font-medium">complete reconstruction</span>: not only the technology should be renovated, but also the design, the information displayed and the way of exploring it.</p>
+            <p class="p-small mt-2">I designed a data visualization with a clean and appealing layout, where the navigation meets the standards. The list view allows to dig deeply in each record, which contains <span class="font-medium">information about the students' travels, works, articles and papers</span>. <a href="http://archivojae2.edaddeplata.org/ficha/personas/20/trabajos/21" target="_blank" class="underline underline-offset-2 hover:no-underline hover:bg-underline-link">You can even read them!</a></p>
           </div>
         </div>
-      
+        <!-- PICS! -->
+        <div class="grid grid-cols-1 gap-1 mt-12 p-1 w-full bg-black md:aspect-[1/0.92] md:grid-cols-6 md:grid-rows-4 md:mt-28">
+          <picture class="overflow-hidden order-1 md:order-none md:col-span-4 md:row-span-2">
+            <img class="w-full" src="./assets/images/scs/jae_home.png" loading="lazy">
+          </picture>
+
+          <picture class="overflow-hidden order-5 md:order-none md:col-span-2 md:row-span-4">
+            <img class="w-full" src="./assets/images/scs/jae_data.png" loading="lazy">
+          </picture>
+
+          <picture class="overflow-hidden order-2 md:order-none md:col-span-2 md:row-span-1">
+            <img class="w-full" src="./assets/images/scs/jae_moving.gif" loading="lazy">
+          </picture>
+
+          <picture class="overflow-hidden order-3 md:order-none md:col-span-2 md:row-span-1">
+            <img class="w-full" src="./assets/images/scs/jae_p_list.png" loading="lazy">
+          </picture>
+
+          <picture class="overflow-hidden order-4 md:order-none md:col-span-4 md:row-span-1">
+            <img class="w-full" src="./assets/images/scs/jae_list.png" loading="lazy">
+          </picture>
+        </div>
+        <!-- BOTTOM NAV -->
+        <div class="w-full flex justify-end mt-10">
+          <nav class="projects-navigator flex items-center">
+            <a class="prev hover:animate-glow">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" class="w-4 h-4 md:w-5 md:h-5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+              </svg>       
+            </a>
+            <h4 class="counter px-1 mt-[2px]">4/9</h4>
+            <a class="next hover:animate-glow">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" class="w-4 h-4 md:w-5 md:h-5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+              </svg>   
+            </a>
+          </nav>
+        </div>
       </section>
-      
+
     </div>
 
 
 
-    <footer class="pt-9 z-30">
-      <div class="layout border-t border-t-slate-300 py-4 flex items-start justify-center">
-        
-          <div class="font-sans hidden text-xs xs:text-base md:text-sm">visualizados.com &copy; 2023</div>
-          <div class="flex flex-col space-y-2 items-center">
-            <p class="font-medium text-right mt-0 self-start">Let's make something together</p>
+    <footer class="pt-16 z-30">
+      <div class="layout border-t border-t-black/10 py-4 flex flex-col space-y-2 items-center">
+            <p class="p-large font-medium text-center mt-0 md:text-2xl">Let's make something together</p>
             <div class="flex items-center">
               <!-- Twitter -->
               <a class="mx-2 hover:animate-glow hover:text-lime" href="https://twitter.com/maritrinez" target="_blank">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-4 h-4"><!--! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path fill="currentColor" d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-4 h-6"><!--! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path fill="currentColor" d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
               </a>
               <!-- Linkedin -->
               <a class="mx-2 hover:animate-glow hover:text-lime" href="https://www.linkedin.com/in/mtnez/" target="_blank">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="w-4 h-4"><!--! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path fill="currentColor" d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="w-4 h-6"><!--! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path fill="currentColor" d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"/></svg>
               </a>
 
               <!-- Mail starts here -->
@@ -290,8 +283,6 @@
             
             </div>
             <div class="font-sans text-xs opacity-30 md:text-sm">visualizados.com &copy; 2023</div>
-        </div>
-        
       </div>
     </footer>
   </div>

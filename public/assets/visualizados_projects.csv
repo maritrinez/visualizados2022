@@ -1,10 +1,10 @@
-index,title,client,strength,project_path,img_path,url,tools
-1,Cultural Grants Archive,Residencia de Estudiantes,here a strength,cultural-grants-archive,w_jae.png,http://archivojae2.edaddeplata.org/,
-2,Conversations,Residencia de Estudiantes,Network,conversations,w_conversations.png,,
-3,Magazines,Residencia de Estudiantes,Canvas & D3.js,magazines,w_magazines.png,http://nrevistasedp.edaddeplata.org/#/,
-4,ODS Performance,Smart & City,Hierarchical data,ods-performace,w_ods.png,,
-5,Terriotorial regeneration ODS impact,Smart & City,Mapbox,territorial-regeneration-ods-impact,w_lada_r.png,,
-6,Your energy counts,Endesa,Data Analysis,your-energy-counts,w_energy.png,,
-7,UE asylum: an unequal right,Nonprofit ptoject,First prize!,asylum-unequal-right,w_asylum.png,http://europasinrefugio.visualizados.com/datos.html#evolution,
-8,Fertility & age,Sanitas,Scrollytelling,fertility-and-age,w_fertility.png,https://sanitasdatasalud.es/conoce-la-tecnica-reproduccion-asistida-mas-adecuada-ti-este-recomendador/,
-9,Activity & participation visual report ,Fundación Cerezales Antonino y Cinia,Relational information,activities-participation-visual-report,w_cerezales.png,http://visualizacion.fcayc.org/#actividad-detalle,
+index,title,client,strength,project_path,img_path,url,tools,review
+1,Magazines,Residencia de Estudiantes,Canvas & D3.js,magazines,w_magazines.png,http://nrevistasedp.edaddeplata.org/#/,,
+2,Your energy counts,Endesa,Data Analysis,your-energy-counts,w_energy.png,,,yes
+3,SDGs Performance,Smart & City,Hierarchical data,sdg-performace,w_ods.png,,,yes
+4,Cultural Grants Archive,Residencia de Estudiantes,here a strength,cultural-grants-archive,w_jae.png,http://archivojae2.edaddeplata.org/,,
+5,Territorial regeneration SDG impact,Smart & City,Mapbox,territorial-regeneration-sdg-impact,w_lada_r.png,,,yes
+8,Conversations,Residencia de Estudiantes,Network,conversations,w_conversations.png,,,
+7,Activity visual report ,Fundación Cerezales Antonino y Cinia,Relational information,activity-visual-report,cerezales_ribbon.png,http://visualizacion.fcayc.org/#actividad-detalle,,yes
+6,Fertility & age,Sanitas,Scrollytelling,fertility-and-age,w_fertility.png,https://sanitasdatasalud.es/conoce-la-tecnica-reproduccion-asistida-mas-adecuada-ti-este-recomendador/,,yes
+9,UE asylum: an unequal right,Nonprofit project,Data Journalism First prize!,asylum-unequal-right,w_asylum.png,http://europasinrefugio.visualizados.com/datos.html#evolution,,yes
