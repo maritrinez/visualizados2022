@@ -4,16 +4,31 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Visualizados</title>
-  <!-- <link rel="icon" type="image/x-icon" href="https://avatars.observableusercontent.com/avatar/7cb136b66a1541518306c883b7ac84c949a51f28843c4a8b199efffa36b93c75?s=102&format=avif"> -->
-  <meta name="description" content="">
+  <title>visualizados</title>
+  <meta name="description" content="data visualizer portfolio">
+  <meta name="keywords" content="d3, data driven journalism, visualizacion de datos, d3js, d3js spain, d3js europe,  data visualization portfolio, data visualization, dataviz, data journalism portfolio, data journalism, dataviz">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="shortcut icon" href="#" />
-  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./assets/images/favicon-16x16.png">
+  <link rel="preload" href="./assets/fonts/space-grotesk-v15-latin-300.woff2" as="font" type="font/woff2" crossorigin> 
+  <link rel="preload" href="./assets/fonts/space-grotesk-v15-latin-500.woff2" as="font" type="font/woff2" crossorigin> 
+  <link rel="preload" href="./assets/fonts/ruda-v23-latin-regular.woff2" as="font" type="font/woff2" crossorigin> 
+  <link rel="preload" href="./assets/fonts/ruda-v23-latin-900.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" type="text/css" href="./assets/styles.css"/>
 </head>
 
 <body>
+  <script type="text/javascript">
+    (function(window, document, dataLayerName, id) {
+    window[dataLayerName]=window[dataLayerName]||[],window[dataLayerName].push({start:(new Date).getTime(),event:"stg.start"});var scripts=document.getElementsByTagName('script')[0],tags=document.createElement('script');
+    function stgCreateCookie(a,b,c){var d="";if(c){var e=new Date;e.setTime(e.getTime()+24*c*60*60*1e3),d="; expires="+e.toUTCString()}document.cookie=a+"="+b+d+"; path=/"}
+    var isStgDebug=(window.location.href.match("stg_debug")||document.cookie.match("stg_debug"))&&!window.location.href.match("stg_disable_debug");stgCreateCookie("stg_debug",isStgDebug?1:"",isStgDebug?14:-1);
+    var qP=[];dataLayerName!=="dataLayer"&&qP.push("data_layer_name="+dataLayerName),isStgDebug&&qP.push("stg_debug");var qPString=qP.length>0?("?"+qP.join("&")):"";
+    tags.async=!0,tags.src="https://visualizados.containers.piwik.pro/"+id+".js"+qPString,scripts.parentNode.insertBefore(tags,scripts);
+    !function(a,n,i){a[n]=a[n]||{};for(var c=0;c<i.length;c++)!function(i){a[n][i]=a[n][i]||{},a[n][i].api=a[n][i].api||function(){var a=[].slice.call(arguments,0);"string"==typeof a[0]&&window[dataLayerName].push({event:n+"."+i+":"+a[0],parameters:[].slice.call(arguments,1)})}}(i[c])}(window,"ppms",["tm","cm"]);
+    })(window, document, 'dataLayer', 'fa4e177a-c9b8-4618-ac03-212b10fb6b66');
+  </script>
   <div id="wrap" class="relative bg-[url('./images/subtle_dots.png')]">
     <section id="whoami" class="z-20 w-full absolute top-[-350%]">
       <div class="layout pb-9 flex flex-col max-w-lg md:max-w-4xl">
@@ -196,7 +211,7 @@
               </svg>       
             </a>
             <h4 class="counter px-1 mt-[2px]">8/9</h4>
-            <a class="next hover:animate-glow">
+            <a class="next hover:animate-glow pointer-events-none opacity-20">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" class="w-4 h-4 md:w-5 md:h-5">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
               </svg>   
@@ -250,7 +265,7 @@
               </svg>       
             </a>
             <h4 class="counter px-1 mt-[2px]">8/9</h4>
-            <a class="next hover:animate-glow">
+            <a class="next hover:animate-glow pointer-events-none opacity-20">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" class="w-4 h-4 md:w-5 md:h-5">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
               </svg>   

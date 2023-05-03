@@ -21,7 +21,6 @@ module.exports = {
     extend: {
       colors: {
         'lime': '#e8e000',
-        'indigo': '#064789',
         'high': 'rgba(0, 230, 107, 0.7)',
         'high_blue': 'rgba(70, 221, 222, 0.7)'
   
