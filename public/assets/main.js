@@ -26,6 +26,7 @@ function revealWork() {
   }
 }
 
+
 window.addEventListener('DOMContentLoaded', (event) => {
   ///////////////////////////
   ///// ON LOAD ORDERS //////
@@ -35,7 +36,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
   const csv_file = './assets/visualizados_projects.csv',
         csv_url = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQoVPZ9h7hN0Ckh41FKH2k42RaS-NGcJzHSVB_kl6GhF-AiaGHmm3JMwNfViiTDS0xeiIV-H0zxNGsd/pub?output=csv';
 
-  const atHome = document.querySelector('#greeting') ? true : false;
+  const atHome = document.querySelector('#greeting') ? true : false,
+        isTouch = ('ontouchstart' in document.documentElement) ? true : false;
 
   csv(csv_file).then((data) => {
     atHome ? loadProjects(data) : updateNavigator(data);
@@ -109,6 +111,9 @@ window.addEventListener('DOMContentLoaded', (event) => {
   // apply interaction to mail links
   const mailtos = document.querySelectorAll('.mailto-link');
   mailtos.forEach(mailto => {
+    // remove text for touch devices to avoid
+    mailto.querySelector("#mailto-message").innerHTML = isTouch ? '' : 'Click to copy email address';
+
     mailto.addEventListener("click", (event) => {copyToClipboard(event)}, false);
 
     mailto.addEventListener("mouseleave", (event) => {
