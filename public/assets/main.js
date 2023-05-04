@@ -131,7 +131,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 // - - -  P R O J E C T   N A V I G A T O R  - - -
 //////////////////////////////////////////////////
 function updateNavigator (data) {
-  const path = window.location.pathname.split('/')[2].replace(/\.html/, ''),
+  const path = window.location.pathname.split('/').pop().replace(/\.html/, ''),
         current = data.filter(d => d.project_path == path)[0],
         maxIndex = max(data, d => d.index);
   
