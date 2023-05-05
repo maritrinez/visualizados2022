@@ -40,7 +40,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
         isTouch = ('ontouchstart' in document.documentElement) ? true : false;
 
   csv(csv_file).then((data) => {
-    atHome ? loadProjects(data) : updateNavigator(data);
+    atHome ? loadProjects(data) : updateNavigator(data, isTouch);
   });
   
   // - - -  S C R O L L   T O   W O R K  - - -
@@ -103,9 +103,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     }, 500);
   });
 
-
   
-
   // - - MAILTO - -
   // copy & reset tooltip message
   // apply interaction to mail links
@@ -135,7 +133,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 //////////////////////////////////////////////////
 // - - -  P R O J E C T   N A V I G A T O R  - - -
 //////////////////////////////////////////////////
-function updateNavigator (data) {
+function updateNavigator (data, isTouch) {
   const path = window.location.pathname.split('/').pop().replace(/\.html/, ''),
         current = data.filter(d => d.project_path == path)[0],
         maxIndex = max(data, d => d.index);
@@ -157,6 +155,7 @@ function updateNavigator (data) {
         break;
       case maxIndex:
         prev_path = data.filter(d => d.index == +current.index - 1)[0].project_path;
+      case maxIndex: 
         prev.href = `./${prev_path}.html`;
         break;
       default:
@@ -164,6 +163,28 @@ function updateNavigator (data) {
         next_path = data.filter(d => d.index == +current.index + 1)[0].project_path;
         next.href = `./${next_path}.html`;
         prev.href = `./${prev_path}.html`;
+    }
+    
+    // - - SWIPE - -
+    if (isTouch) {
+      const swipeZone = document.getElementById('project');
+
+      let touchstartX = 0
+      let touchendX = 0
+          
+      function checkDirection() {
+        if (touchendX < touchstartX && next_path) window.location.href = `./${next_path}.html`;
+        if (touchendX > touchstartX && prev_path) window.location.href = `./${prev_path}.html`;
+      }
+
+      swipeZone.addEventListener('touchstart', e => {
+        touchstartX = e.changedTouches[0].screenX
+      })
+
+      swipeZone.addEventListener('touchend', e => {
+        touchendX = e.changedTouches[0].screenX
+        checkDirection()
+      })
     }
   });
 }
