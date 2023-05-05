@@ -183,7 +183,7 @@ function updateNavigator (data, isTouch) {
 
       swipeZone.addEventListener('touchend', e => {
         touchendX = e.changedTouches[0].screenX
-        checkDirection()
+        if (Math.abs(touchendX - touchstartX) > 80) checkDirection();
       })
     }
   });
