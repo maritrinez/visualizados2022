@@ -58,7 +58,7 @@
     
     h4,
     .h4 {
-      @apply font-sans text-sm xs:text-base font-bold md:text-xl;
+      @apply font-sans text-lg font-bold md:text-xl;
     }
 
     h5,
@@ -85,7 +85,7 @@
     }
 
     .p-xsmall {
-      @apply font-prose font-light text-xs lg:text-sm;
+      @apply font-prose font-light text-sm;
     }
 }
 @tailwind components;
