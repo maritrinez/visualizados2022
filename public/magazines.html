@@ -33,17 +33,6 @@
 </head>
 
 <body>
-  <script type="text/javascript">
-    (function(window, document, dataLayerName, id) {
-    window[dataLayerName]=window[dataLayerName]||[],window[dataLayerName].push({start:(new Date).getTime(),event:"stg.start"});var scripts=document.getElementsByTagName('script')[0],tags=document.createElement('script');
-    function stgCreateCookie(a,b,c){var d="";if(c){var e=new Date;e.setTime(e.getTime()+24*c*60*60*1e3),d="; expires="+e.toUTCString()}document.cookie=a+"="+b+d+"; path=/"}
-    var isStgDebug=(window.location.href.match("stg_debug")||document.cookie.match("stg_debug"))&&!window.location.href.match("stg_disable_debug");stgCreateCookie("stg_debug",isStgDebug?1:"",isStgDebug?14:-1);
-    var qP=[];dataLayerName!=="dataLayer"&&qP.push("data_layer_name="+dataLayerName),isStgDebug&&qP.push("stg_debug");var qPString=qP.length>0?("?"+qP.join("&")):"";
-    tags.async=!0,tags.src="https://visualizados.containers.piwik.pro/"+id+".js"+qPString,scripts.parentNode.insertBefore(tags,scripts);
-    !function(a,n,i){a[n]=a[n]||{};for(var c=0;c<i.length;c++)!function(i){a[n][i]=a[n][i]||{},a[n][i].api=a[n][i].api||function(){var a=[].slice.call(arguments,0);"string"==typeof a[0]&&window[dataLayerName].push({event:n+"."+i+":"+a[0],parameters:[].slice.call(arguments,1)})}}(i[c])}(window,"ppms",["tm","cm"]);
-    })(window, document, 'dataLayer', 'fa4e177a-c9b8-4618-ac03-212b10fb6b66');
-  </script>
-  
   <div id="wrap" class="relative bg-[url('./images/subtle_dots.png')]">
     <section id="whoami" class="z-20 w-full absolute top-[-350%]">
       <div class="layout pb-9 flex flex-col max-w-lg md:max-w-4xl">
@@ -247,16 +236,16 @@
         <!-- PICS! -->
         <div class="grid grid-cols-1 gap-1 mt-12 p-1 w-full bg-black md:aspect-[1/0.69] md:grid-cols-6 md:grid-rows-4 md:mt-28">
           <picture class="overflow-hidden order-1 md:order-none md:col-span-3 md:row-span-2">
-            <img class="w-full" src="./assets/images/scs/m_home.png" loading="lazy">
+            <img class="w-full" src="./assets/images/scs/m_home.webp" loading="lazy">
           </picture>
           <picture class="overflow-hidden order-2 md:order-none md:col-span-3 md:row-span-2">
             <img class="w-full" src="./assets/images/scs/m_round.gif" loading="lazy">
           </picture>
           <picture class="overflow-hidden order-5 col-span-1 md:order-none md:col-span-2 md:row-span-2">
-            <img class="w-full" src="./assets/images/scs/m_person_list.png" loading="lazy">
+            <img class="w-full" src="./assets/images/scs/m_person_list.webp" loading="lazy">
           </picture>
           <picture class="overflow-hidden order-4 md:order-none md:col-span-2">
-            <img class="w-full" src="./assets/images/scs/m_home_detail.png" loading="lazy">
+            <img class="w-full" src="./assets/images/scs/m_home_detail.webp" loading="lazy">
           </picture>
           <!-- el video tiene que ir en un div para que haga el cropped -->
           <div class="overflow-hidden order-3 md:order-none md:col-span-2 md:row-span-1">
@@ -265,10 +254,10 @@
             </video>
           </div>
           <picture class="overflow-hidden order-6 md:order-none md:col-span-2">
-            <img class="w-full" src="./assets/images/scs/m_pic.png" loading="lazy">
+            <img class="w-full" src="./assets/images/scs/m_pic.webp" loading="lazy">
           </picture>
           <picture class="overflow-hidden order-7 md:order-none md:col-span-2">
-            <img class="w-full" src="./assets/images/scs/m_article.png" loading="lazy">
+            <img class="w-full" src="./assets/images/scs/m_article.webp" loading="lazy">
           </picture>
         </div>
         <!-- BOTTOM NAV -->

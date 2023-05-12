@@ -33,16 +33,6 @@
 </head>
 
 <body>
-  <script type="text/javascript">
-    (function(window, document, dataLayerName, id) {
-    window[dataLayerName]=window[dataLayerName]||[],window[dataLayerName].push({start:(new Date).getTime(),event:"stg.start"});var scripts=document.getElementsByTagName('script')[0],tags=document.createElement('script');
-    function stgCreateCookie(a,b,c){var d="";if(c){var e=new Date;e.setTime(e.getTime()+24*c*60*60*1e3),d="; expires="+e.toUTCString()}document.cookie=a+"="+b+d+"; path=/"}
-    var isStgDebug=(window.location.href.match("stg_debug")||document.cookie.match("stg_debug"))&&!window.location.href.match("stg_disable_debug");stgCreateCookie("stg_debug",isStgDebug?1:"",isStgDebug?14:-1);
-    var qP=[];dataLayerName!=="dataLayer"&&qP.push("data_layer_name="+dataLayerName),isStgDebug&&qP.push("stg_debug");var qPString=qP.length>0?("?"+qP.join("&")):"";
-    tags.async=!0,tags.src="https://visualizados.containers.piwik.pro/"+id+".js"+qPString,scripts.parentNode.insertBefore(tags,scripts);
-    !function(a,n,i){a[n]=a[n]||{};for(var c=0;c<i.length;c++)!function(i){a[n][i]=a[n][i]||{},a[n][i].api=a[n][i].api||function(){var a=[].slice.call(arguments,0);"string"==typeof a[0]&&window[dataLayerName].push({event:n+"."+i+":"+a[0],parameters:[].slice.call(arguments,1)})}}(i[c])}(window,"ppms",["tm","cm"]);
-    })(window, document, 'dataLayer', 'fa4e177a-c9b8-4618-ac03-212b10fb6b66');
-  </script>
   <div id="wrap" class="relative bg-[url('./images/subtle_dots.png')]">
     <section id="whoami" class="z-20 w-full absolute top-[-350%]">
       <div class="layout pb-9 flex flex-col max-w-lg md:max-w-4xl">
@@ -250,13 +240,13 @@
         <!-- PICS! -->
         <div class="grid grid-cols-1 gap-1 mt-12 p-1 w-full max-w-md mx-auto bg-black md:max-w-none md:aspect-[1/0.78] md:grid-cols-10 md:grid-rows-4 md:mt-28">
           <picture class="overflow-hidden order-4 md:order-none md:col-span-2 md:row-span-4">
-            <img class="w-full" src="./assets/images/scs/energy_scroll.png" alt="Conversations home screen" loading="lazy">
+            <img class="w-full" src="./assets/images/scs/energy_scroll.webp" alt="Conversations home screen" loading="lazy">
           </picture>
           <picture class="overflow-hidden order-5 md:order-none md:col-span-2 md:row-span-4">
-            <img class="w-full" src="./assets/images/scs/energy_earlies.png" alt="Conversations home screen" loading="lazy">
+            <img class="w-full" src="./assets/images/scs/energy_earlies.webp" alt="Conversations home screen" loading="lazy">
           </picture>
           <picture class="overflow-hidden order-1 md:order-none md:col-span-3 md:row-span-2">
-            <img class="w-full" src="./assets/images/scs/energy_banner.png" alt="Conversations home screen" loading="lazy">
+            <img class="w-full" src="./assets/images/scs/energy_banner.webp" alt="Conversations home screen" loading="lazy">
           </picture>
         
           <div class="overflow-hidden order-2 md:order-none md:col-span-3 md:row-span-3">
@@ -265,7 +255,7 @@
             </video>
           </div>
           <picture class="overflow-hidden order-3 md:order-none md:col-span-3 md:row-span-2">
-            <img class="w-full" class="w-full"src="./assets/images/scs/energy_stacked.png" alt="Rounded stacked area chart" loading="lazy">
+            <img class="w-full" class="w-full"src="./assets/images/scs/energy_stacked.webp" alt="Rounded stacked area chart" loading="lazy">
           </picture>
           <div class="flex flex-col items-center justify-center space-y-6 text-white p-12 order-6 md:order-none md:col-span-3 md:row-span-1">
             <p class="text-center">Scroll down to see the pics of some of the work underneath</p>
@@ -279,16 +269,16 @@
         <!-- PICS R! -->
         <div class="mt-12 grid grid-cols-1 gap-1 p-1 w-full md:aspect-[1/0.6] md:grid-cols-7 md:grid-rows-4 bg-black">
           <picture class="overflow-hidden md:col-span-3 md:row-span-4">
-            <img class="w-full" src="./assets/images/scs/energy_r_screen.png" alt="Conversations home screen" loading="lazy">
+            <img class="w-full" src="./assets/images/scs/energy_r_screen.webp" alt="Conversations home screen" loading="lazy">
           </picture>
           <picture class="overflow-hidden md:col-span-2 md:row-span-2">
-            <img class="w-full" src="./assets/images/scs/energy_r_lines.png" alt="Conversations home screen" loading="lazy">
+            <img class="w-full" src="./assets/images/scs/energy_r_lines.webp" alt="Conversations home screen" loading="lazy">
           </picture>
           <picture class="overflow-hidden md:col-span-2 md:row-span-2">
-            <img class="w-full" src="./assets/images/scs/energy_r_clusters.png" alt="Conversations home screen" loading="lazy">
+            <img class="w-full" src="./assets/images/scs/energy_r_clusters.webp" alt="Conversations home screen" loading="lazy">
           </picture>
           <picture class="overflow-hidden md:col-span-4 md:row-span-2">
-            <img class="w-full" src="./assets/images/scs/energy_r_moments.png" alt="Conversations home screen" loading="lazy">
+            <img class="w-full" src="./assets/images/scs/energy_r_moments.webp" alt="Conversations home screen" loading="lazy">
           </picture>               
         </div>
         <!-- BOTTOM NAV -->
