@@ -1,0 +1,9 @@
+index,title,client,strength,project_path,img_path,url,tools,review
+1,Magazines,Residencia de Estudiantes,"Canvas, D3 and a circular scroll",magazines,w_magazines.webp,http://nrevistasedp.edaddeplata.org/#/,,
+2,Your energy counts,Endesa,Data Analysis,your-energy-counts,w_energy.webp,,,yes
+3,SDGs Performance,Smart & City,Hierarchical data,sdg-performace,w_ods.webp,,,yes
+4,Cultural Grants Archive,Residencia de Estudiantes,Squared voronois,cultural-grants-archive,w_jae.webp,http://archivojae2.edaddeplata.org/,,
+5,Territorial regeneration SDG impact,Smart & City,Mapbox,territorial-regeneration-sdg-impact,w_lada_r.webp,,,yes
+8,Conversations,Residencia de Estudiantes,Filtering through timelines,conversations,w_conversations.webp,,,
+7,Activity visual report ,Fundación Cerezales Antonino y Cinia,Relational information,activity-visual-report,cerezales_ribbon.webp,http://visualizacion.fcayc.org/#actividad-detalle,,yes
+6,Fertility & age,Sanitas,Scrollytelling,fertility-and-age,w_fertility.webp,https://sanitasdatasalud.es/conoce-la-tecnica-reproduccion-asistida-mas-adecuada-ti-este-recomendador/,,yes
