@@ -1,5 +1,5 @@
-import {csv} from "https://cdn.skypack.dev/d3-fetch@3";
-import {selectAll, select} from "https://cdn.skypack.dev/d3-selection@3";
+import {csv} from "https://cdn.jsdelivr.net/npm/d3-fetch@3/+esm";
+import {selectAll, select} from "https://cdn.jsdelivr.net/npm/d3-selection@3/+esm";
 import {sort, max, filter} from "https://cdn.jsdelivr.net/npm/d3-array@3/+esm";
 
 
@@ -396,5 +396,4 @@ function copyToClipboard(e) {
   // Update tooltip message
   e.target.querySelector("#mailto-message").innerHTML = "Email copied to clipboard !!";
 }
-
 
